@@ -19,9 +19,11 @@ public class JoinCon extends HttpServlet {
 		String mem_id = request.getParameter("id");
 		String mem_pw = request.getParameter("pw");
 		String mem_email = request.getParameter("email");
+		String mem_name = request.getParameter("email");
+		String mem_tel = request.getParameter("email");
 		
 		
-		Member joinMember = new Member(mem_id,mem_pw,mem_email);
+		Member joinMember = new Member(mem_id,mem_pw,mem_name,mem_tel,mem_email);
 		System.out.println(joinMember.toString());
 		MemberDAO dao= new MemberDAO();
 		int cnt = dao.insertMember(joinMember);

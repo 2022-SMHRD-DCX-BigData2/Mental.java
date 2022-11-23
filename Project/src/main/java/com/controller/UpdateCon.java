@@ -39,7 +39,6 @@ public class UpdateCon extends HttpServlet {
 			// 같은 이름으로 덮어쓰기 해야한다.
 			session.setAttribute("loginMember", update);
 			
-			
 			response.sendRedirect("index.jsp");
 		}else {
 			System.out.println("UpdateCon : 회원정보수정 실패! ");
