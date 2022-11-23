@@ -6,22 +6,22 @@
 <mapper namespace="com.database.MemberMapper">
    
     <insert id="insertMember" parameterType="com.domain.Member">
-   		insert into member(mem_id,mem_pw,mem_email,mem_no) values(#{id},#{pw},#{email},sequence_mem.nextval)
+   		insert into member(mem_id,mem_pw,mem_email,mem_no) values(#{mem_id},#{mem_pw},#{mem_email},sequence_mem.nextval)
     </insert>
 	<select id="selectMember" parameterType="com.domain.Member"
 	resultType="com.domain.Member">
-			select mem_id from member where mem_id=#{id} and mem_pw=#{pw}
+			select mem_id from member where mem_id=#{mem_id} and mem_pw=#{mem_pw}
 			
 	</select>
 	
 	<update id="updateMember" parameterType="com.domain.Member">
-		update member set mem_pw=#{pw}, mem_name=#{name}, mem_tel=#{tel}, mem_email=#{email} where mem_id=#{id}
+		update member set mem_pw=#{mem_pw}, mem_name=#{mem_name}, mem_tel=#{mem_tel}, mem_email=#{mem_email} where mem_id=#{mem_id}
 	</update>
 	<select id="selectAll" resultType="com.domain.Member">
 		select * from member
 	</select>
 	
 	<delete id="deleteMember" parameterType="String">
-		delete from member where email=#{email}
+		delete from member where mem_id=#{mem_id}
 	</delete>
 </mapper>

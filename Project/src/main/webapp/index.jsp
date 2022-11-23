@@ -84,12 +84,12 @@
 						</c:when>
 						<c:otherwise>
 							<!-- 문자열 비교는 eq -->
-							<c:if test="${loginMember.id eq 'admin' }">
+							<c:if test="${loginMember.mem_id eq 'admin' }">
 								<a href="select.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원관리</a>
 								<a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
 							</c:if>
-							<c:if test="${loginMember.id ne 'admin' }">
-								<h5 class="#">${loginMember.id}님 환영합니다~</h1>
+							<c:if test="${loginMember.mem_id ne 'admin' }">
+								<h5 class="#">${loginMember.mem_id}님 환영합니다~</h1>
 								<a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
 							</c:if>
 						</c:otherwise>

@@ -21,15 +21,15 @@ public class UpdateCon extends HttpServlet {
 		HttpSession session = request.getSession();
 		Member loginMember = (Member)session.getAttribute("loginMember");
 		System.out.println(loginMember.toString());
-		String id = loginMember.getid();
+		String mem_id = loginMember.getmem_id();
 		
 		
-		String pw = request.getParameter("pw");
-		String name = request.getParameter("name");
-		String tel = request.getParameter("tel");
-		String email = request.getParameter("email");
+		String mem_pw = request.getParameter("pw");
+		String mem_name = request.getParameter("name");
+		String mem_tel = request.getParameter("tel");
+		String mem_email = request.getParameter("email");
 		
-		Member update = new Member(id,pw,name,tel,email);
+		Member update = new Member(mem_id,mem_pw,mem_name,mem_tel,mem_email);
 		System.out.println(update.toString());
 		MemberDAO dao = new MemberDAO();
 		int cnt= dao.updateMember(update);

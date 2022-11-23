@@ -88,11 +88,11 @@
 			<ul class="actions vertical">
 				<li><h5>회원정보수정</h5></li>
 					<form action="UpdateCon" method="post">
-						<li>접속한 ID :${loginMember.id}</li>
+						<li>접속한 ID :${loginMember.mem_id}</li>
 						<li><input type="password" name="pw" placeholder="PW를 입력하세요" style="width: 500px; margin: 0 auto;"></li>
-						<li><input type="text" name="name" placeholder="이름을 입력하세요" value="${loginMember.name }" style="width: 500px; margin: 0 auto;"></li>
-						<li><input type="text" name="tel" placeholder="전화번호을 입력하세요" value="${loginMember.tel }"  style="width: 500px; margin: 0 auto;"></li>
-						<li><input type="text" name="email" placeholder="email을 입력하세요" value="${loginMember.email }" style="width: 500px; margin: 0 auto;"></li>
+						<li><input type="text" name="name" placeholder="이름을 입력하세요" value="${loginMember.mem_name }" style="width: 500px; margin: 0 auto;"></li>
+						<li><input type="text" name="tel" placeholder="전화번호을 입력하세요" value="${loginMember.mem_tel }"  style="width: 500px; margin: 0 auto;"></li>
+						<li><input type="text" name="email" placeholder="email을 입력하세요" value="${loginMember.mem_email }" style="width: 500px; margin: 0 auto;"></li>
 						<li><input type="submit" value="회원정보수정" class="button fit" style="width: 500px; margin: 0 auto;"></li>
 					</form>
 					<!-- 

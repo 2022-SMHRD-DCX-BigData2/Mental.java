@@ -16,12 +16,12 @@ public class JoinCon extends HttpServlet {
 		
 		System.out.println("[ JoinCon ]");
 		request.setCharacterEncoding("UTF-8");
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		String email = request.getParameter("email");
+		String mem_id = request.getParameter("id");
+		String mem_pw = request.getParameter("pw");
+		String mem_email = request.getParameter("email");
 		
 		
-		Member joinMember = new Member(id,pw,email);
+		Member joinMember = new Member(mem_id,mem_pw,mem_email);
 		System.out.println(joinMember.toString());
 		MemberDAO dao= new MemberDAO();
 		int cnt = dao.insertMember(joinMember);

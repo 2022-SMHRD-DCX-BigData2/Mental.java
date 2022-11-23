@@ -1,78 +1,118 @@
 package com.domain;
 
 public class Member {
-	private String id;
-	private String pw;
-	private String email;
-	private String name;
-	private String tel;
+	private String mem_id;
+	private String mem_pw;
+	private String mem_email;
+	private String mem_name;
+	private String mem_tel;
+	private String mem_no;
+	
+//	  ----------------------------생성자 -----------------------------------------
 	
 	
 	
-	public Member(String pw, String email, String name, String tel) {
+	public Member(String mem_id, String mem_pw, String mem_name, String mem_tel, String mem_email, String mem_no) {
 		super();
-		this.pw = pw;
-		this.email = email;
-		this.name = name;
-		this.tel = tel;
+		this.mem_id = mem_id;
+		this.mem_pw = mem_pw;
+		this.mem_email = mem_email;
+		this.mem_name = mem_name;
+		this.mem_tel = mem_tel;
+		this.mem_no = mem_no;
 	}
 
-	public Member(String id) {
+	public Member() {
 		super();
-		this.id = id;
 	}
 
-	public Member(String id, String pw, String email, String name, String tel) {
+	public Member(String mem_pw, String mem_email, String mem_name, String mem_tel) {
 		super();
-		this.id = id;
-		this.pw = pw;
-		this.email = email;
-		this.name = name;
-		this.tel = tel;
+		this.mem_pw = mem_pw;
+		this.mem_email = mem_email;
+		this.mem_name = mem_name;
+		this.mem_tel = mem_tel;
+	}
+
+	public Member(String mem_id) {
+		super();
+		this.mem_id = mem_id;
+	}
+
+	public Member(String mem_id, String mem_pw, String mem_email, String mem_name, String mem_tel) {
+		super();
+		this.mem_id = mem_id;
+		this.mem_pw = mem_pw;
+		this.mem_email = mem_email;
+		this.mem_name = mem_name;
+		this.mem_tel = mem_tel;
 	}
 	
-	public Member(String id, String pw) {
+	public Member(String mem_id, String mem_pw) {
 		super();
-		this.id = id;
-		this.pw = pw;
+		this.mem_id = mem_id;
+		this.mem_pw = mem_pw;
 	}
-	public Member(String id, String pw, String email) {
+	public Member(String mem_id, String mem_pw, String mem_email) {
 		super();
-		this.id = id;
-		this.pw = pw;
-		this.email = email;
+		this.mem_id = mem_id;
+		this.mem_pw = mem_pw;
+		this.mem_email = mem_email;
 	}
-	public String getid() {
-		return id;
+
+	
+	
+// ----------------------------------------- Getter , Setter------------------------
+	
+	public String getmem_id() {
+		return mem_id;
 	}
-	public void setid(String id) {
-		this.id = id;
+
+	public void setmem_id(String mem_id) {
+		this.mem_id = mem_id;
 	}
-	public String getPw() {
-		return pw;
+
+	public String getmem_pw() {
+		return mem_pw;
 	}
-	public void setPw(String pw) {
-		this.pw = pw;
+
+	public void setmem_pw(String mem_pw) {
+		this.mem_pw = mem_pw;
 	}
-	public String getEmail() {
-		return email;
+
+	public String getmem_email() {
+		return mem_email;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+
+	public void setmem_email(String mem_email) {
+		this.mem_email = mem_email;
 	}
-	public String getName() {
-		return name;
+
+	public String getmem_name() {
+		return mem_name;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setmem_name(String mem_name) {
+		this.mem_name = mem_name;
 	}
-	public String getTel() {
-		return tel;
+
+	public String getmem_tel() {
+		return mem_tel;
 	}
-	public void setTel(String tel) {
-		this.tel = tel;
+
+	public void setmem_tel(String mem_tel) {
+		this.mem_tel = mem_tel;
+	}
+
+	public String getmem_no() {
+		return mem_no;
+	}
+
+	public void setmem_no(String mem_no) {
+		this.mem_no = mem_no;
 	}
 	
+
 	
 	
 		

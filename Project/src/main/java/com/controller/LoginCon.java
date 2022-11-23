@@ -19,10 +19,10 @@ public class LoginCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("[ Login Con ]");
 		request.setCharacterEncoding("UTF-8");
-		String id= request.getParameter("id");
-		String pw = request.getParameter("pw");
+		String mem_id= request.getParameter("id");
+		String mem_pw = request.getParameter("pw");
 		
-		Member login = new Member(id,pw);
+		Member login = new Member(mem_id,mem_pw);
 		System.out.println(login);
 		
 		MemberDAO dao = new MemberDAO();

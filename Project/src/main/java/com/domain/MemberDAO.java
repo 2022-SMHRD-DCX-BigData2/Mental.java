@@ -104,7 +104,6 @@ public class MemberDAO {
 	      try {
 	         //               mapper.xml의 id값
 	    	  memberList = sqlSession.selectList("selectAll");
-	         
 	         // 만약에 내가 원하는 일을 했으면 DB에 반영
 	         if(memberList != null) {
 	            System.out.println("DAO : 회원전체검색 성공!!");
@@ -128,11 +127,11 @@ public class MemberDAO {
 	} // 회원 전체검색 끝~
 	
 	// 관리자가 회원삭제 기능 구현
-	public int deleteMember(String email) {
+	public int deleteMember(String mem_id) {
 		int cnt = 0;
 		try {
 
-			cnt = sqlSession.delete("deleteMember", email);
+			cnt = sqlSession.delete("deleteMember", mem_id);
 
 			if (cnt > 0) {
 

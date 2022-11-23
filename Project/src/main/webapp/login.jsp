@@ -81,6 +81,10 @@
       <div class="row mb-5 justify-content-center">
         <div class="col-lg-5 mx-auto order-1" data-aos="fade-up" data-aos-delay="200">
           
+          
+          
+          
+          
           <!-- 로그인 폼 -->
           <form action="LoginCon" class="form-box" method="post">
             <div class="row">
