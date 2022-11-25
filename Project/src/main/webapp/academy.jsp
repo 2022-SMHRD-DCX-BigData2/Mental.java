@@ -5,6 +5,8 @@
 <head>
     <meta charset="utf-8">
     <title>키워드로 장소검색하고 목록으로 표출하기</title>
+    
+    
     <style>
 .map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
 .map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
@@ -66,7 +68,7 @@
 </head>
 <body>
 <div class="map_wrap">
-    <div id="map" "></div>
+    <div id="map"></div>
 
     <div id="menu_wrap" class="bg_white">
         <div class="option">
@@ -91,7 +93,7 @@
 		
 		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 		    mapOption = {
-		        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+		        center: new kakao.maps.LatLng(34.9692627526184, 127.48426529984145), // 지도의 중심좌표 / 주소 : 스마트인재개발원
 		        level: 3 // 지도의 확대 레벨
 		    };  
 		
@@ -302,6 +304,10 @@
 		        el.removeChild (el.lastChild);
 		    }
 		}
+		 
+		 
+		 
+		 
 
 
 </script>
