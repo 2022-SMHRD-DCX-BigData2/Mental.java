@@ -1,3 +1,6 @@
+<%@page import="com.domain.BoardDAO"%>
+
+<%@page import="java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
 <!DOCTYPE html>
@@ -34,6 +37,23 @@
 </head>
 
 <body>
+
+	<%-- <%
+		// 현재 세션 상태를 체크한다
+		String mem_id = null;
+		if(session.getAttribute("mem_id") != null){
+			mem_id = (String)session.getAttribute("mem_id");
+		}
+		// 로그인을 한 사람만 글을 쓸 수 있도록 코드를 수정한다
+		if(mem_id == null){
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('로그인을 하세요')");
+			script.println("location.href='login.jsp'");
+			script.println("</script>");
+		}
+	
+	%> --%>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -112,7 +132,6 @@
             <textarea class="form-control" id="exampleFormControlTextarea1" name="contents" rows="10"></textarea>
             <br>
           </div>
-          <div>
         <button type="submit" class="btn btn-info" style ="background-color: light-green; margin:0 auto;">등록하기</button>
         <button type="button" class="btn btn-secondary" style ="background-color: light-green; margin:0 auto">목록으로</button>
     	</form>
@@ -122,7 +141,6 @@
         
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -137,4 +155,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
+</body><%@page import="com.domain.BoardDAO"%>
+
+<%@page import="java.io.PrintWriter"%>
