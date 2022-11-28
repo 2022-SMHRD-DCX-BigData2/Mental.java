@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">ㄴ
+    <meta charset="utf-8">
     <title>DGital - Digital Agency HTML Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -53,8 +53,11 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0"><img src="img/로고1.png" alt="Logo"></h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
+						<div class="Logo">
+                   				<img src="img/로고1.png" alt="Logo">
+                    		<!-- <h1 class="m-0"><img src="img/로고1.png" alt="Logo"></h1> -->
+                    		<!-- <img src="img/logo.png" alt="Logo"> -->
+                 		</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -62,7 +65,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="project.html" class="nav-item nav-link">적성검사</a>
+                        <a href="project.html" class="nav-item nav-link">채용정보</a>
                         <a href="service.html" class="nav-item nav-link">자격증 캘린더</a>
                         <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
                         <a href="project.html" class="nav-item nav-link">커뮤니티</a>
