@@ -53,11 +53,11 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-						<div class="Logo">
-                   				<img src="img/로고1.png" alt="Logo">
-                    		<!-- <h1 class="m-0"><img src="img/로고1.png" alt="Logo"></h1> -->
-                    		<!-- <img src="img/logo.png" alt="Logo"> -->
-                 		</div>
+                <div class="Logo">
+                   <img src="img/로고1.png" alt="Logo">
+                    <!-- <h1 class="m-0"><img src="img/로고1.png" alt="Logo"></h1> -->
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -81,22 +81,22 @@
                         
                     </div>
                     <c:choose>
-						<c:when test="${empty loginMember}">
-							<a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
-							<a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
-						</c:when>
-						<c:otherwise>
-							<!-- 문자열 비교는 eq -->
-							<c:if test="${loginMember.mem_id eq 'admin' }">
-								<a href="select.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원관리</a>
-								<a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
-							</c:if>
-							<c:if test="${loginMember.mem_id ne 'admin' }">
-								<h5 class="#">${loginMember.mem_id}님 환영합니다~</h1>
-								<a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
-							</c:if>
-						</c:otherwise>
-					</c:choose>
+                  <c:when test="${empty loginMember}">
+                     <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
+                     <a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
+                  </c:when>
+                  <c:otherwise>
+                     <!-- 문자열 비교는 eq -->
+                     <c:if test="${loginMember.mem_id eq 'admin' }">
+                        <a href="select.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원관리</a>
+                        <a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
+                     </c:if>
+                     <c:if test="${loginMember.mem_id ne 'admin' }">
+                        <h5 class="#">${loginMember.mem_id}님 환영합니다~</h1>
+                        <a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
+                     </c:if>
+                  </c:otherwise>
+               </c:choose>
                 </div>
             </nav>
 
@@ -209,9 +209,9 @@
                             </div>
                             <h5 class="mb-3">주변학원찾기</h5>
                             <p class="m-0">내가 살고 있는 동네 주변에서 나에게 맞는 학원이 있는지 검색하고 비교해볼 수 있습니다.</p>
-                            	<a class="btn btn-square" href="">
-                            	<i class="fa fa-arrow-right"></i>
-                            	</a>
+                               <a class="btn btn-square" href="">
+                               <i class="fa fa-arrow-right"></i>
+                               </a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6  fadeInUp" data--delay="0.5s">
