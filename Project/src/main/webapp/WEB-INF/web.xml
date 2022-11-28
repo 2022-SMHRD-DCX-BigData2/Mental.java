@@ -47,6 +47,7 @@
   	<description></description>
   	<servlet-class>com.controller.WriteCon</servlet-class>
   </servlet>
+	
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -75,6 +76,7 @@
   	<servlet-name>WriteCon</servlet-name>
   	<url-pattern>/WriteCon</url-pattern>
   </servlet-mapping>
+  
 
 </web-app>
 
