@@ -40,6 +40,12 @@
   	<description></description>
   	<servlet-class>com.controller.DeleteCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>fullcalendarCon</servlet-name>
+  	<display-name>fullcalendarCon</display-name>
+  	<description></description>
+  	<servlet-class>com.controller.fullcalendarCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -63,6 +69,10 @@
   <servlet-mapping>
   	<servlet-name>DeleteCon</servlet-name>
   	<url-pattern>/DeleteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>fullcalendarCon</servlet-name>
+  	<url-pattern>/fullcalendarCon</url-pattern>
   </servlet-mapping>
 
 </web-app>
