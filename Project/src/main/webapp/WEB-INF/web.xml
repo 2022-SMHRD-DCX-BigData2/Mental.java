@@ -41,10 +41,17 @@
   	<servlet-class>com.controller.DeleteCon</servlet-class>
   </servlet>
   <servlet>
+<<<<<<< HEAD
   	<servlet-name>fullcalendarCon</servlet-name>
   	<display-name>fullcalendarCon</display-name>
   	<description></description>
   	<servlet-class>com.controller.fullcalendarCon</servlet-class>
+=======
+  	<servlet-name>WriteCon</servlet-name>
+  	<display-name>WriteCon</display-name>
+  	<description></description>
+  	<servlet-class>com.controller.WriteCon</servlet-class>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/Mental.java.git
   </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
@@ -71,8 +78,13 @@
   	<url-pattern>/DeleteCon</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
+<<<<<<< HEAD
   	<servlet-name>fullcalendarCon</servlet-name>
   	<url-pattern>/fullcalendarCon</url-pattern>
+=======
+  	<servlet-name>WriteCon</servlet-name>
+  	<url-pattern>/WriteCon</url-pattern>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/Mental.java.git
   </servlet-mapping>
 
 </web-app>
