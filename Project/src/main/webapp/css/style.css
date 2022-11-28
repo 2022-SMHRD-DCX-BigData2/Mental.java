@@ -705,3 +705,14 @@ box-shadow: inset 0px 0px 5px white;}
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 }
+
+.map_move{
+	height: 500px;
+    width: 500px;
+    display: block;
+    margin-left: auto;
+}
+.aca_info{
+	position : relative;
+	
+}
