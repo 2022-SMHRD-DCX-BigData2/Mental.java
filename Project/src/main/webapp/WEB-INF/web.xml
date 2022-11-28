@@ -40,7 +40,8 @@
   	<description></description>
   	<servlet-class>com.controller.DeleteCon</servlet-class>
   </servlet>
-  <servlet>
+
+	<servlet>
   	<servlet-name>WriteCon</servlet-name>
   	<display-name>WriteCon</display-name>
   	<description></description>

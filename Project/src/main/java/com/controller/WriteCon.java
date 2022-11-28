@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.domain.BoardDAO;
+
 
 public class WriteCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -17,7 +19,9 @@ public class WriteCon extends HttpServlet {
 		String mem_id = request.getParameter("id");
 		String bd_contents = request.getParameter("contents");
 		String bd_title = request.getParameter("title");
+		BoardDAO dao = new BoardDAO();
 		
+		System.out.println(dao.getDate());
 		
 		
 	

@@ -24,4 +24,9 @@
 	<delete id="deleteMember" parameterType="String">
 		delete from member where mem_id=#{mem_id}
 	</delete>
+	
+	<select id="getDate" resultType="String">
+		select sysdate from dual
+	</select>
+	
 </mapper>
