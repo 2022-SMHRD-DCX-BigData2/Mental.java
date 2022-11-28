@@ -1,10 +1,8 @@
-<%@page import="com.domain.BoardDAO"%>
-
-<%@page import="java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" isELIgnored="false"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>DGital - Digital Agency HTML Template</title>
@@ -37,23 +35,6 @@
 </head>
 
 <body>
-
-	<%-- <%
-		// 현재 세션 상태를 체크한다
-		String mem_id = null;
-		if(session.getAttribute("mem_id") != null){
-			mem_id = (String)session.getAttribute("mem_id");
-		}
-		// 로그인을 한 사람만 글을 쓸 수 있도록 코드를 수정한다
-		if(mem_id == null){
-			PrintWriter script = response.getWriter();
-			script.println("<script>");
-			script.println("alert('로그인을 하세요')");
-			script.println("location.href='login.jsp'");
-			script.println("</script>");
-		}
-	
-	%> --%>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -76,24 +57,24 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="index.jsp" class="nav-item nav-link active">Home</a>
-                        <a href="#" class="nav-item nav-link">적성검사</a>
-                        <a href="#" class="nav-item nav-link">자격증 캘린더</a>
-                        <a href="#" class="nav-item nav-link">주변학원찾기</a>
-                        <a href="#" class="nav-item nav-link">커뮤니티</a>
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="project.html" class="nav-item nav-link">적성검사</a>
+                        <a href="service.html" class="nav-item nav-link">자격증 캘린더</a>
+                        <a href="project.html" class="nav-item nav-link">주변학원찾기</a>
+                        <a href="project.html" class="nav-item nav-link">커뮤니티</a>
                         
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
-                                <a href="#" class="dropdown-item">캘린더</a>
-                                <a href="#" class="dropdown-item">추천 자격증</a>
-                                <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
+                                <a href="team.html" class="dropdown-item">캘린더</a>
+                                <a href="testimonial.html" class="dropdown-item">추천 자격증</a>
+                                <a href="404.html" class="dropdown-item">회원정보 수정</a>
                             </div>
                         </div>
                         
                     </div>
-                    <a href="register.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
-                    <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
+                    <a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
+                    <a href="login.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
                 </div>
             </nav>
 
@@ -101,46 +82,58 @@
                 <div class="container my-5 py-5 px-lg-5">
                     <div class="row g-5 py-5">
                         <div class="col-12 text-center">
-                            <h1 class="text-white animated slideInDown">Search</h1>
+                            <h1 class="text-white animated slideInDown">Community</h1>
                             <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                            <nav aria-label="breadcrumb">
-                            
-                            
-
+                             
+                                </ol>
                             </nav>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    <!-- 게시글 작성 form 시작 -->    
-  		<form action='WriteCon' method="post">
-        <div class="form-group">
-        		<p style="text-align:center; font-size: 30px; font-weight: 900;">게시글 작성</p>
-        		<br>
-              <label for="exampleFormControlInput1">제목</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="제목을 작성해주세요.">
-            <br>
-          </div>
-        <div class="form-group">
-            <label for="exampleFormControlInput1">작성자</label>
-             <span><input type="text" class="form-control" id="exampleFormControlInput1" name="id" >${loginMember.mem_id}</span>
-            <br>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">내용</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" name="contents" rows="10"></textarea>
-            <br>
-          </div>
-        <button type="submit" class="btn btn-info" style ="background-color: light-green; margin:0 auto;">등록하기</button>
-        <button type="button" class="btn btn-secondary" style ="background-color: light-green; margin:0 auto">목록으로</button>
-    	</form>
-    <!-- 게시글 작성 form 끝 -->
-    </div>
+        <!-- Navbar & Hero End -->
 
+
+        <!-- Service Start -->
+        <!-- 게시판 시작 -->
+        <div class="container">
+            <div class="row table-div">
+                <table class="table-setting" >
+                    <thead>
+                    <tr>
+                    <th class ="th-setting" style="width: 10%">번호</th>
+                    <th class ="th-setting" style="width: 50%">제목</th>
+                    <th class ="th-setting" style="width:15%">작성자</th>
+                    <th class ="th-setting" style="width :15%">작성일</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                   		 
+                   		 <tr>
+                    		<td>1</td>
+                    		<td>안녕하세요</td>
+                    		<td>홍길동</td>
+                    		<td>2020-07-13</td>
+                    	</tr>
+                    </tbody>
+                    </table>
+                    </div>
+                    <!-- 글쓰기 버튼 생성 -->
+                    <div align="right">
+                    <button class="btn write_btn" onclick="location.href='write.jsp'">글쓰기</button>
+                    </div>
+                    </div>
+                <!-- 게시판 메인 페이지 영역 끝 -->
+                
         
+        
+        
+
+
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -156,3 +149,4 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
+</html>

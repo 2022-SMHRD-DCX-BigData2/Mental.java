@@ -6,7 +6,7 @@ public class Board {
 	private String bd_contents;
 	private String bd_date;
 	private int bd_cnt;
-	private int mem_no;
+	private String mem_no;
 	
 	// Getter, Setter 
 	
@@ -40,10 +40,10 @@ public class Board {
 	public void setBd_cnt(int bd_cnt) {
 		this.bd_cnt = bd_cnt;
 	}
-	public int getMem_no() {
+	public String getMem_no() {
 		return mem_no;
 	}
-	public void setMem_no(int mem_no) {
+	public void setMem_no(String mem_no) {
 		this.mem_no = mem_no;
 	}
 
@@ -52,7 +52,7 @@ public class Board {
 	//	 생성자
 	
 	
-	public Board(int bd_num, String bd_title, String bd_contents, String bd_date, int bd_cnt, int mem_no) {
+	public Board(int bd_num, String bd_title, String bd_contents, String bd_date, int bd_cnt, String mem_no) {
 		super();
 		this.bd_num = bd_num;
 		this.bd_title = bd_title;
@@ -60,6 +60,14 @@ public class Board {
 		this.bd_date = bd_date;
 		this.bd_cnt = bd_cnt;
 		this.mem_no = mem_no;
+	}
+	public Board(int bd_num,  String mem_no, String bd_title, String bd_contents,String bd_date) {
+		super();
+		this.bd_num = bd_num;
+		this.mem_no = mem_no;
+		this.bd_title = bd_title;
+		this.bd_contents = bd_contents;
+		this.bd_date = bd_date;
 	}
 
 	

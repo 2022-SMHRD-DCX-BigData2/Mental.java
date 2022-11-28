@@ -29,4 +29,12 @@
 		select sysdate from dual
 	</select>
 	
+	<select id="getNum" resultType="int">
+		select cnt(bd_num) from board
+	</select>
+	
+	<insert id="insertBoard" parameterType="com.domain.Board">
+		insert into board(bd_num,mem_no,bd_title,bd_contents,bd_date) values(#{bd_num},#{mem_no},#{bd_title},#{bd_contents},#{bd_date})
+	</insert>
+	
 </mapper>
