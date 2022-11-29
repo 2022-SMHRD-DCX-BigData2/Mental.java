@@ -3,6 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<!-- header 불러오기 -->
+<%@ include file="subHerder.jsp" %>
+
     <meta charset="utf-8">
     <title>키워드로 장소검색하고 목록으로 표출하기</title>
     

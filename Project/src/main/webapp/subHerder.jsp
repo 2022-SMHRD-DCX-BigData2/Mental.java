@@ -1,12 +1,11 @@
 <%@page import="com.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<% 
 
-
-%>
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="utf-8">
     <title>DGital - Digital Agency HTML Template</title>
@@ -53,11 +52,8 @@
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                <div class="Logo">
-                   <img src="img/로고1.png" alt="Logo">
-                    <!-- <h1 class="m-0"><img src="img/로고1.png" alt="Logo"></h1> -->
+                    <img src="img/그림1.png">
                     <!-- <img src="img/logo.png" alt="Logo"> -->
-                </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -66,58 +62,30 @@
                     <div class="navbar-nav mx-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="project.html" class="nav-item nav-link">채용정보</a>
-                        <a href="./Calendar/Calendar.html" class="nav-item nav-link">자격증 캘린더</a>
-                        <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
+                        <a href="service.html" class="nav-item nav-link">자격증 캘린더</a>
+                        <a href="project.html" class="nav-item nav-link">주변학원찾기</a>
                         <a href="project.html" class="nav-item nav-link">커뮤니티</a>
-                        
-                        
                         
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
                                 <a href="team.html" class="dropdown-item">캘린더</a>
                                 <a href="testimonial.html" class="dropdown-item">추천 자격증</a>
-                                <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
+                                <a href="404.html" class="dropdown-item">회원정보 수정</a>
                             </div>
                         </div>
                         
                     </div>
-                    <c:choose>
-                  <c:when test="${empty loginMember}">
-                     <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
-                     <a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
-                  </c:when>
-                  <c:otherwise>
-                     <!-- 문자열 비교는 eq -->
-                     <c:if test="${loginMember.mem_id eq 'admin' }">
-                        <a href="select.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원관리</a>
-                        <a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
-                     </c:if>
-                     <c:if test="${loginMember.mem_id ne 'admin' }">
-                        <h5 class="#">${loginMember.mem_id}님 환영합니다~</h1>
-                        <a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
-                     </c:if>
-                  </c:otherwise>
-               </c:choose>
+                    <a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
+                    <a href="login.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
                 </div>
             </nav>
+        <!-- Navbar & Hero End -->
+		
 
         
-            <div class="container-xxl bg-primary hero-header">
-                <div class="container px-lg-5">
-                    <div class="row g-5 align-items-end">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="text-white mb-4 animated slideInDown">취업에 자신감을 더하다!</h1>
-                            <p class="text-white pb-3 animated slideInDown">안녕하세요. 자격증 플러스 페이지 입니다. 환영합니다.</p>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-start">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Navbar & Hero End -->
+        
+        
 
 
         <!-- Back to Top -->
@@ -127,7 +95,7 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib//.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
@@ -138,5 +106,4 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>
