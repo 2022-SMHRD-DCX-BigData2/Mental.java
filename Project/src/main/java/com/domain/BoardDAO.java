@@ -30,33 +30,35 @@ public class BoardDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			sqlSession.close();
 		}
 		return date;
 	}
 	
-	// 게시글 번호 얻기
-	public int getNum() {
-		int num = 0;
+	// Mem_no 가져오기
+	public String getmemNo(String mem_id) {
+		String mem_no="";
 		try {
 
-			num = sqlSession.selectOne("getNum");
-			System.out.println("게시글번호얻기 성공");
-			if (num!=0) {
-				
-				num++;
+			mem_no = sqlSession.selectOne("getmemNo",mem_id);
+
+			if (mem_no!=null) {
+
+				System.out.println("DAO : Get Mem_no 성공");
+				sqlSession.commit();
+
 			} else {
-				
-				num = 1;
+
+				sqlSession.rollback();
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			sqlSession.close(); 
 		}
-		return num;
+		
+		return mem_no;
 	}
+	
 	
 	// 게시글 쓰기
 	public int insertBoard(Board newBoard) {
@@ -100,7 +102,7 @@ public class BoardDAO {
 	         
 	         // 만약에 내가 원하는 일을 했으면 DB에 반영
 	         if(boardList != null) {
-	            System.out.println("DAO : 회원전체검색 성공!!");
+	            System.out.println("DAO : 게시판전체검색 성공!!");
 	            sqlSession.commit();
 	         }else {
 	            // 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
@@ -119,6 +121,7 @@ public class BoardDAO {
 	      
 	      return boardList;
 	}
+	
 	
 	
 }

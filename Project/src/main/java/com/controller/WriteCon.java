@@ -23,15 +23,15 @@ public class WriteCon extends HttpServlet {
 		HttpSession session = request.getSession();
 		Member loginMember = (Member)session.getAttribute("loginMember");
 		System.out.println(loginMember.toString());
-		String mem_no = loginMember.getmem_no();
+		String mem_id = loginMember.getmem_id();
+		String mem_no = dao.getmemNo(mem_id);
+		System.out.println(mem_no);
 		String bd_title = request.getParameter("title");
 		String bd_contents = request.getParameter("contents");
 		String bd_date = dao.getDate();
-		int bd_num = dao.getNum();
 		System.out.println(bd_date);
 		
-		Board newBoard = new Board(bd_num,mem_no,bd_title,bd_contents,bd_date);
-		System.out.println(newBoard.toString());
+		Board newBoard = new Board(mem_no,bd_title,bd_contents,bd_date);
 		int cnt =  dao.insertBoard(newBoard);
 		if(cnt > 0 ) {
 			System.out.println("WriteCon : 글쓰기 성공!! ");

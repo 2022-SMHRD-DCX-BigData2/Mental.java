@@ -61,13 +61,15 @@ public class Board {
 		this.bd_cnt = bd_cnt;
 		this.mem_no = mem_no;
 	}
-	public Board(int bd_num,  String mem_no, String bd_title, String bd_contents,String bd_date) {
+	public Board(String mem_no, String bd_title, String bd_contents,String bd_date) {
 		super();
-		this.bd_num = bd_num;
 		this.mem_no = mem_no;
 		this.bd_title = bd_title;
 		this.bd_contents = bd_contents;
 		this.bd_date = bd_date;
+	}
+	public Board() {
+		super();
 	}
 
 	
