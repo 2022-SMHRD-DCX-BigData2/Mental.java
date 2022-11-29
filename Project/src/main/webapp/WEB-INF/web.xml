@@ -46,6 +46,12 @@
   	<description></description>
   	<servlet-class>com.controller.WriteCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>UpdateBoard</servlet-name>
+  	<display-name>UpdateBoard</display-name>
+  	<description></description>
+  	<servlet-class>com.controller.UpdateBoard</servlet-class>
+  </servlet>
 
 
 
@@ -77,6 +83,10 @@
   <servlet-mapping>
   	<servlet-name>WriteCon</servlet-name>
   	<url-pattern>/WriteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateBoard</servlet-name>
+  	<url-pattern>/UpdateBoard</url-pattern>
   </servlet-mapping>
 
 

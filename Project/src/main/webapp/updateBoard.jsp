@@ -99,37 +99,38 @@
         </div>
 
 		<%
+			request.setCharacterEncoding("UTF-8");
 			int bd_num = Integer.parseInt(request.getParameter("bd_num"));
 			BoardDAO dao = new BoardDAO();
 			Board board_view = dao.view(bd_num);
-		
+			
 		
 		%>
-		<form action="updateBoard.jsp" method="post">    	
+		<form action="UpdateBoard" method="post">    	
         <div class="form-group">
         		<p style="text-align:center; font-size: 30px; font-weight: 900;">게시글 보기</p>
         		<br>
-        		
-           <label for="exampleFormControlInput1">제목</label>
-           <input type="text" name="bd_num" value=<%=board_view.getBd_num() %>>
-           <h3 name="bd_title"><%= board_view.getBd_title() %></h3>
-           <br>
+              <label for="exampleFormControlInput1">제목</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="제목을 수정해주세요." value=<%=board_view.getBd_title() %>>
+            <br>
           </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">작성자</label>
-            <h3><%=dao.getmemId(board_view.getMem_no())%></h3>
+            <h3><%=dao.getmemId(board_view.getMem_no()) %></h3>
+            <input name="bd_num" value=<%=board_view.getBd_num() %>>
             <br>
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1">내용</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" name="contents" rows="10">
-            	<%= board_view.getBd_contents() %>
+            <%=board_view.getBd_contents() %>
             </textarea>
             <br>
           </div>
-        <button  type="submit" class="btn btn-info" style ="background-color: light-green; margin:0 auto;" >수정하기</button>
-        <button class="btn btn-secondary" style ="background-color: light-green; margin:0 auto">목록으로</button>
-</form>
+          <div>
+        <button type="submit" class="btn btn-info" style ="background-color: light-green; margin:0 auto;">수정하기</button>
+        <button type="button" class="btn btn-secondary" style ="background-color: light-green; margin:0 auto" onclick="location.href='board.jsp'">목록으로</button>
+	</form>
     </div>
 
         

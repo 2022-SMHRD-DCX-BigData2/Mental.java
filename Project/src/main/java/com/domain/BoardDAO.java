@@ -174,6 +174,33 @@ public class BoardDAO {
 		      
 		      return getboard;
 		}
+		
+		// 게시판 수정 기능 구현
+		public int updateBoard(Board update_board) {
+			int cnt = 0;
+			try {
+
+				cnt = sqlSession.insert("updateBoard", update_board);
+
+				if (cnt > 0) {
+
+					System.out.println("DAO : 게시판수정 성공!");
+					sqlSession.commit();
+
+				} else {
+
+					sqlSession.rollback();
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				sqlSession.close();
+			}
+			return cnt;
+			
+			
+		}
 	
 	
 }

@@ -71,6 +71,12 @@ public class Board {
 	public Board() {
 		super();
 	}
+	public Board(int bd_num, String bd_title, String bd_contents) {
+		super();
+		this.bd_num = bd_num;
+		this.bd_title = bd_title;
+		this.bd_contents = bd_contents;
+	}
 
 	
 	

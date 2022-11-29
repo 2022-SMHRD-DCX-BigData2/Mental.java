@@ -49,5 +49,9 @@
 	<select id="view" parameterType="int" resultType="com.domain.Board">
 		select * from board where bd_num=#{bd_num}
 	</select>
+	
+	<update id="updateBoard" parameterType="com.domain.Board">
+		update board set bd_title=#{bd_title}, bd_contents=#{bd_contents} where bd_num=#{bd_num}
+	</update>
 
 </mapper>
