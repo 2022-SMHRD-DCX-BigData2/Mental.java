@@ -22,22 +22,24 @@ public class WriteCon extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession();
 		Member loginMember = (Member)session.getAttribute("loginMember");
+		System.out.println(loginMember.toString());
 		String mem_no = loginMember.getmem_no();
 		String bd_title = request.getParameter("title");
 		String bd_contents = request.getParameter("contents");
 		String bd_date = dao.getDate();
 		int bd_num = dao.getNum();
+		System.out.println(bd_date);
 		
 		Board newBoard = new Board(bd_num,mem_no,bd_title,bd_contents,bd_date);
 		System.out.println(newBoard.toString());
 		int cnt =  dao.insertBoard(newBoard);
 		if(cnt > 0 ) {
-			System.out.println("WriteCon : 게시판등록 성공!! ");
-			response.sendRedirect("Board.html"); // 게시판 기능 만든 후 추후 작성 
+			System.out.println("WriteCon : 글쓰기 성공!! ");
+			response.sendRedirect("board.jsp"); // 게시판 기능 만든 후 추후 작성 
 			
 		}else {
-			System.out.println("JoinCon : 회원가입 실패!! ");
-			response.sendRedirect("Board.html"); // 여기도 ~~
+			System.out.println("WriteCon : 글쓰기 실패!! ");
+			response.sendRedirect("board.jsp"); // 여기도 ~~
 		}
 
 		

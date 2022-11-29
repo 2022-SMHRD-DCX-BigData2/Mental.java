@@ -1,5 +1,7 @@
 package com.domain;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import com.database.SqlSessionManager;
@@ -38,21 +40,22 @@ public class BoardDAO {
 		int num = 0;
 		try {
 
+			num = sqlSession.selectOne("getNum");
 			System.out.println("게시글번호얻기 성공");
-			num = sqlSession.selectOne("getNext");
+			if (num!=0) {
+				
+				num++;
+			} else {
+				
+				num = 1;
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			sqlSession.close();
+			sqlSession.close(); 
 		}
-		if (num!=0) {
-			
-			return num+1;
-		} else {
-			
-			return num;
-		}
+		return num;
 	}
 	
 	// 게시글 쓰기
@@ -87,6 +90,35 @@ public class BoardDAO {
 		return cnt;
 	} // 게시판 등록 끝!
 	
+	// 게시판 전체 검색
+	public List<Board> getList(){
+		List<Board> boardList = null;
+	      
+	      try {
+	         //               mapper.xml의 id값
+	    	  boardList = sqlSession.selectList("getList");
+	         
+	         // 만약에 내가 원하는 일을 했으면 DB에 반영
+	         if(boardList != null) {
+	            System.out.println("DAO : 회원전체검색 성공!!");
+	            sqlSession.commit();
+	         }else {
+	            // 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
+	            sqlSession.rollback();
+	         }
+	         
+	         
+	      } catch (Exception e) {
+	         // TODO: handle exception
+	         e.printStackTrace();
+	      } finally {
+	         // 빌렸던 Connection 객체를 반납
+	         sqlSession.close();
+	      }
+	      
+	      
+	      return boardList;
+	}
 	
 	
 }

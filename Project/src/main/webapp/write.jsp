@@ -80,7 +80,7 @@
                         <a href="#" class="nav-item nav-link">적성검사</a>
                         <a href="#" class="nav-item nav-link">자격증 캘린더</a>
                         <a href="#" class="nav-item nav-link">주변학원찾기</a>
-                        <a href="#" class="nav-item nav-link">커뮤니티</a>
+                        <a href="board.jsp" class="nav-item nav-link">커뮤니티</a>
                         
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
@@ -133,7 +133,7 @@
             <br>
           </div>
         <button type="submit" class="btn btn-info" style ="background-color: light-green; margin:0 auto;">등록하기</button>
-        <button type="button" class="btn btn-secondary" style ="background-color: light-green; margin:0 auto">목록으로</button>
+        <button type="button" class="btn btn-secondary" style ="background-color: light-green; margin:0 auto" onclick="location.href='board.jsp'">목록으로</button>
     	</form>
     <!-- 게시글 작성 form 끝 -->
     </div>

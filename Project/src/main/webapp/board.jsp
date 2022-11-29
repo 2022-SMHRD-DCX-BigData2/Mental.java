@@ -1,3 +1,6 @@
+<%@page import="java.util.List"%>
+<%@page import="com.domain.Board"%>
+<%@page import="com.domain.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -110,17 +113,29 @@
                     </thead>
                     <tbody>
                    		 
-                   		 <tr>
-                    		<td>1</td>
-                    		<td>안녕하세요</td>
-                    		<td>홍길동</td>
-                    		<td>2020-07-13</td>
-                    	</tr>
+                   		 
+                    		<%
+						BoardDAO dao = new BoardDAO(); // 인스턴스 생성
+						List<Board> list = dao.getList();
+						for(int i = 0; i < list.size(); i++){
+					%>
+					<tr>
+						<td><%= list.get(i).getBd_num() %></td>
+						<!-- 게시글 제목을 누르면 해당 글을 볼 수 있도록 링크를 걸어둔다 -->
+						<td><a href="view.jsp?Mem_no=<%= list.get(i).getMem_no() %>">
+							<%= list.get(i).getBd_title() %></a></td>
+						<td><%= list.get(i).getMem_no() %></td>
+						<td><%= list.get(i).getBd_date() %></td>
+					</tr>
+					<%
+						}
+					%>
                     </tbody>
                     </table>
                     </div>
                     <!-- 글쓰기 버튼 생성 -->
                     <div align="right">
+                    
                     <button class="btn write_btn" onclick="location.href='write.jsp'">글쓰기</button>
                     </div>
                     </div>
