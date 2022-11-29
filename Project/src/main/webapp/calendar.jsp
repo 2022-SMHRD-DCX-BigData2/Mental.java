@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -131,19 +133,16 @@ ul, li {
 	text-align: right;
 }
 
-.section {
+section {
 	float: left;
 	width: 70%;
-	background: rgb(255, 255, 255);
-	
-	}
-.aside {
+	background: Blue;
+}
+aside {
 	
 	float : right ;
 	background: white;
 }
-
-
 
 
 </style>
@@ -164,16 +163,15 @@ ul, li {
 
 		<!-- Navbar & Hero Start -->
 		<div class="container-xxl position-relative p-0">
-			<nav
-				class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-				<a href="" class="navbar-brand p-0">
-					<img src="img/그림1.png"> <!-- <img src="img/logo.png" alt="Logo"> -->
-				</a>
-				<button class="navbar-toggler" type="button"
-					data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-					<span class="fa fa-bars"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarCollapse">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <img src="img/그림1.png">
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="project.html" class="nav-item nav-link">적성검사</a>
@@ -194,46 +192,104 @@ ul, li {
                     <a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
                     <a href="login.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
                 </div>
-			</nav>
+            </nav>
 
-			<div class="container-xxl py-5 bg-primary hero-header">
-				<div class="container my-5 py-5 px-lg-5">
-					<div class="row g-5 py-5">
-						<div class="col-12 text-center">
-							<h1 class="text-white animated slideInDown">주변 학원 찾기</h1>
-							<hr class="bg-white mx-auto mt-0" style="width: 90px;">
+            <div class="container-xxl py-5 bg-primary hero-header">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                        <div class="col-12 text-center">
+                            <h1 class="text-white animated slideInDown">자격증 캘린더</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
 
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 		
 		<!-- Navbar & Hero End -->
 
 
 		<!-- Service Start -->
-		<div style="height: 550px;">
-			<section class="section">
-				<img src="./img/map.jpg" style="width:100% ;height:500px;">
-			</section>
-			<aside class="aside">
-				            <li id='liSearchOption'>
-                <div>
-           <input type="text" class="form-control" name="search" placeholder="지역을 입력해 주세요." >
-                <button class="btn btn-primary" >검색</button>
-                </div>
-                </li>
-			</aside>
-		</div>
-		<div>
-				<h1>여기는 학원 정보란입니다!</h1>
-		</div>
 
-	</div> <!-- 마지막 div  -->
+				<section>
+					<div>
+					 
+					</div>
+				</section>
+				<aside>
+					<div class="con">
+						<div class="main">
+							<a>자격증 리스트</a>
+						</div>
+						<div class="main2">
+							<h5>관심 있는 자격증을 체크해 주세요.</h5>
+						</div>
+
+						<div class="main2">
+							<a>&nbsp;</a>
+						</div>
+						<form action="#" >
+						<div class="wow">
+							<ul>
+				
+								<li>
+									<label for="consen01" class="">
+									<input type="checkbox" name="check"  id="consen01"  value="컴퓨터활용능력2급"/> 컴퓨터활용능력2급
+									</label>
+								</li>
+								
+								<li>
+									<label for="consen02">
+									<input type="checkbox" name="check"  id="consen02"  value="컴퓨터응용가공산업기사"/> 컴퓨터응용가공산업기사
+									</label>
+								</li>
+								<li>
+									<label for="consen03"> 
+									<input type="checkbox" name="check" id="consen03"  value="컴퓨터활용능력1급"/> 컴퓨터활용능력1급
+									</label>
+								</li>
+								<li>
+									<label for="consen04"> 
+									<input type="checkbox" name="check" id="consen04"  value="컴퓨터그래픽운용기능사"/> 컴퓨터그래픽운용기능사
+									</label>
+								</li>
+								<li>
+									<label for="consen04"> 
+									<input type="checkbox" name="check" id="consen04"  value="컴퓨터시스템응용기술사"/> 컴퓨터시스템응용기술사
+									</label>
+								</li>
+								<li>
+									<label for="consen04"> 
+									<input type="checkbox" name="check" id="consen04"  value="컴퓨터응용선반기능사"/> 컴퓨터응용선반기능사
+									</label>
+								</li>
+								<li>
+									<label for="consen04"> 
+									<input type="checkbox" name="check" id="consen04"  value=""/>
+									</label>
+								</li>
+								<li>
+									<label for="consen04">
+									<input type="checkbox" name="check" id="consen04"  value=""/>
+									</label>
+								</li>
+	
+							</ul>
+							</div>
+							  	<div >
+									<button class="agree-btn" type="submit">완료</button>								
+								</div>
+							</form>
+			</div>
+		</aside>
+		
+</div>
+</body>
 
 <!-- Service End -->
+
+
 
 
 <!-- Back to Top -->

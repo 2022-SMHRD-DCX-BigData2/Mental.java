@@ -65,7 +65,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="project.html" class="nav-item nav-link">채용정보</a>
+                        <a href="certificate.jsp" class="nav-item nav-link">채용정보</a>
                         <a href="./Calendar/Calendar.html" class="nav-item nav-link">자격증 캘린더</a>
                         <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
                         <a href="project.html" class="nav-item nav-link">커뮤니티</a>

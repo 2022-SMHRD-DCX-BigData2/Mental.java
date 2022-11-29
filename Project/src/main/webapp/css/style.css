@@ -717,9 +717,10 @@ box-shadow: inset 0px 0px 5px white;}
 	
 }
 
-.form-control {
+.form2-control {
     display: inline;
     width: 95%;
+    margin-top: 40px;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 100;
