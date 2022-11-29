@@ -8,6 +8,7 @@
 <%@ include file="subHerder.jsp" %>
 
 <title>관심 자격증 검색하기</title>
+
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -48,10 +49,9 @@
             
         }
         .select{
-          max-width: 500px;
-          width: 95%;
-
-          margin: 20px auto 0px auto;
+          max-width: 100%;
+          width: 70%;
+          margin: 50px auto 0px auto;
           box-shadow: 0px 0px 3px 0px gray;
           padding: 20px;
         }
@@ -68,11 +68,6 @@
         } 
     </style>
     
-    <script>
-      function register(){
-        alert('등록하시겠습니까?');
-      }
-    </script>
 
 </head>
 <body>
@@ -142,8 +137,31 @@
     <div class="btn">
       <button type="button" class="btn btn-outline-primary" onclick="register()">등록하기</button>
     </div>
+  
+  
+    <div id="com">
+        <!-- 등록버튼 클릭시 정보가  들어가는 공간 -->
+    </div>
 
-  </div>
 
+    <!-- 등록버튼 클릭시 밑에 추가되는 동적 jQuery -->
+	<script src="/Project/jquery-3.6.1.min.js"></script>
+    <script>
+        function register(){
+          alert('등록하시겠습니까?');
+        }
+
+          $('.btn.btn-outline-primary').click(function(){
+              let com = $('input[type=text]').val() 
+              let com2 = "<span>"+com+"<span><button class='removeCom'>삭제</button><br>"
+              $('#com').append(com2)
+              $('input').val('') 
+          })
+  
+          $(document).on('click','.removeCom', function(){
+              $('#com').empty()
+          })
+        </script>
+        
 </body>
 </html>
