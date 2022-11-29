@@ -88,8 +88,7 @@
                             <h1 class="text-white animated slideInDown">Community</h1>
                             <hr class="bg-white mx-auto mt-0" style="width: 90px;">
                              
-                                </ol>
-                            </nav>
+                             
                         </div>
                     </div>
                 </div>
@@ -114,21 +113,24 @@
                     <tbody>
                    		 
                    		 
-                    		<%
+                    <%
 						BoardDAO dao = new BoardDAO(); // 인스턴스 생성
 						List<Board> list = dao.getList();
 						for(int i = 0; i < list.size(); i++){
+							String mem_id = dao.getmemId(list.get(i).getMem_no());
+					
 					%>
 					<tr>
 						<td><%= list.get(i).getBd_num() %></td>
 						<!-- 게시글 제목을 누르면 해당 글을 볼 수 있도록 링크를 걸어둔다 -->
 						<td><a href="view.jsp?bd_num=<%= list.get(i).getBd_num() %>">
 							<%= list.get(i).getBd_title() %></a></td>
-						<td><%= dao.getmemId(list.get(i).getMem_no()) %></td>
+						<td><%= mem_id %></td>
 						<td><%= list.get(i).getBd_date() %></td>
 					</tr>
 					<%
 						}
+						
 					%>
                     </tbody>
                     </table>

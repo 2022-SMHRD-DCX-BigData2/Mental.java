@@ -114,23 +114,22 @@ public class BoardDAO {
 	         // TODO: handle exception
 	         e.printStackTrace();
 	      } finally {
-	         // 빌렸던 Connection 객체를 반납
-	         sqlSession.close();
+	         
 	      }
 	      
 	      
 	      return boardList;
 	}
-	// Mem_no 가져오기
+	// Mem_id 가져오기
 		public String getmemId(String mem_no) {
 			String mem_id="";
 			try {
 
-				mem_id = sqlSession.selectOne("getmemNo",mem_no);
+				mem_id = sqlSession.selectOne("getmemId",mem_no);
 
 				if (mem_id!=null) {
 
-					System.out.println("DAO : Get Mem_no 성공");
+					System.out.println("DAO : Get Mem_id 성공");
 					sqlSession.commit();
 
 				} else {
@@ -141,11 +140,12 @@ public class BoardDAO {
 			} catch (Exception e) {
 				e.printStackTrace();
 			} finally {
+				// 빌렸던 Connection 객체를 반납
 			}
 			
 			return mem_id;
 		}
-	
+		
 	
 	
 	
