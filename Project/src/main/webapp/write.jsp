@@ -124,7 +124,7 @@
           </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">작성자</label>
-             <span><input type="text" class="form-control" id="exampleFormControlInput1" name="id" >${loginMember.mem_id}</span>
+             <span class="form-control" id="exampleFormControlInput1">${loginMember.mem_id}</span>
             <br>
           </div>
           <div class="form-group">
