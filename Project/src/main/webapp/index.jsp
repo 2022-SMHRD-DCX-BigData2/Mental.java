@@ -49,15 +49,12 @@
         <!-- Spinner End -->
 
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
+          <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                <div class="Logo">
-                   <img src="img/로고1.png" alt="Logo">
-                    <!-- <h1 class="m-0"><img src="img/로고1.png" alt="Logo"></h1> -->
+                    <img src="img/그림1.png">
+                  
                     <!-- <img src="img/logo.png" alt="Logo"> -->
-                </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -65,21 +62,25 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="certificate.jsp" class="nav-item nav-link">채용정보</a>
-                        <a href="./Calendar/Calendar.html" class="nav-item nav-link">자격증 캘린더</a>
-                        <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
-                        <a href="board.jsp" class="nav-item nav-link">커뮤니티</a>
-                        
-                        
+                        <a href="project.html" class="nav-item nav-link">채용정보</a>
+                        <a href="service.html" class="nav-item nav-link">자격증 캘린더</a>
+                        <a href="project.html" class="nav-item nav-link">주변학원찾기</a>
+                        <a href="project.html" class="nav-item nav-link">커뮤니티</a>
                         
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
                                 <a href="team.html" class="dropdown-item">캘린더</a>
                                 <a href="testimonial.html" class="dropdown-item">추천 자격증</a>
-                                <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
+                                <a href="404.html" class="dropdown-item">회원정보 수정</a>
                             </div>
                         </div>
+                        
+                    </div>
+                    <a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
+                    <a href="login.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
+                </div>
+            </nav>
                         
                     </div>
                     <c:choose>

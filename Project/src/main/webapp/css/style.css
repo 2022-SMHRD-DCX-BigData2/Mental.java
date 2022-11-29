@@ -733,3 +733,32 @@ box-shadow: inset 0px 0px 5px white;}
     border-radius: 10px;
     transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
 }
+
+  .title{
+          
+            color: black;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .select{
+          max-width: 500px;
+          width: 95%;
+
+          margin: 20px auto 0px auto;
+          box-shadow: 0px 0px 3px 0px gray;
+          padding: 20px;
+        }
+        .btn{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          margin-top: 10px;
+          }
+         .btn > button {
+            margin-right: 10px;
+        } 
