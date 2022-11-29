@@ -243,9 +243,9 @@ var calendar = $('#calendar').fullCalendar({
   },
 
   //이벤트 클릭시 수정이벤트
-  eventClick: function (event, jsEvent, view) {
-    editEvent(event);
-  }
+  // eventClick: function (event, jsEvent, view) {
+  //   editEvent(event);
+  // }
 
 });
 
