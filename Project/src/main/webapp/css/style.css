@@ -752,7 +752,6 @@ box-shadow: inset 0px 0px 5px white;}
           padding: 20px;
         }
         .btn{
-          display: flex;
           flex-direction: row;
           justify-content: center;
           align-items: center;

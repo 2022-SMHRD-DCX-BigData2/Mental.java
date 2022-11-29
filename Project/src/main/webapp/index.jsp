@@ -61,24 +61,24 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="project.html" class="nav-item nav-link">채용정보</a>
-                        <a href="service.html" class="nav-item nav-link">자격증 캘린더</a>
-                        <a href="project.html" class="nav-item nav-link">주변학원찾기</a>
-                        <a href="project.html" class="nav-item nav-link">커뮤니티</a>
+                        <a href="index.jsp" class="nav-item nav-link active">Home</a>
+                        <a href="recruitment.html" class="nav-item nav-link">채용정보</a>
+                        <a href="./Calendar/Calendar.html" class="nav-item nav-link">자격증 캘린더</a>
+                        <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
+                        <a href="board.jsp" class="nav-item nav-link">커뮤니티</a>
                         
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
-                                <a href="team.html" class="dropdown-item">캘린더</a>
-                                <a href="testimonial.html" class="dropdown-item">추천 자격증</a>
-                                <a href="404.html" class="dropdown-item">회원정보 수정</a>
+                                <a href="#" class="dropdown-item">캘린더</a>
+                                <a href="mypage.jsp" class="dropdown-item">추천 자격증</a>
+                                <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
                             </div>
                         </div>
                         
                     </div>
                     <a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
-                    <a href="login.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
+                    <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
                 </div>
             </nav>
                         
@@ -95,13 +95,12 @@
                         <a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
                      </c:if>
                      <c:if test="${loginMember.mem_id ne 'admin' }">
-                        <h5 class="#">${loginMember.mem_id}님 환영합니다~</h1>
+                        <h1>${loginMember.mem_id}님 환영합니다~</h1>
                         <a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
                      </c:if>
                   </c:otherwise>
                </c:choose>
                 </div>
-            </nav>
 
             <div class="container-xxl bg-primary hero-header">
                 <div class="container px-lg-5">
@@ -119,7 +118,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         <!-- Navbar & Hero End -->
 
 
@@ -170,7 +168,7 @@
                             <div class="service-icon flex-shrink-0">
                                 <i class="fa bi-ui-checks fa-2x"></i>
                             </div>
-                            <h5 class="mb-3">적성검사</h5>
+                            <h5 class="mb-3">채용정보</h5>
                             <p class="m-0">IT직무와 관련한 역량을 인/적성 측면으로 측정하여 적합도를 확인할 수 있습니다. </p>
                             <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
                         </div>
@@ -236,7 +234,6 @@
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
