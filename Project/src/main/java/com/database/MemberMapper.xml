@@ -35,7 +35,7 @@
 	</insert>
 	
 	<select id="getList" resultType="com.domain.Board">
-		select * from board
+		select * from board order by bd_date desc
 	</select>
 	
 	<select id="getmemNo" parameterType="String" resultType="String">
