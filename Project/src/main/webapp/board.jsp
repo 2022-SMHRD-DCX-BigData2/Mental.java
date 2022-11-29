@@ -124,7 +124,7 @@
 						<!-- 게시글 제목을 누르면 해당 글을 볼 수 있도록 링크를 걸어둔다 -->
 						<td><a href="view.jsp?bd_num=<%= list.get(i).getBd_num() %>">
 							<%= list.get(i).getBd_title() %></a></td>
-						<td><%= list.get(i).getMem_no() %></td>
+						<td><%= dao.getmemId(list.get(i).getMem_no()) %></td>
 						<td><%= list.get(i).getBd_date() %></td>
 					</tr>
 					<%

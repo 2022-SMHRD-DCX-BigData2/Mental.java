@@ -41,4 +41,9 @@
 	<select id="getmemNo" parameterType="String" resultType="String">
 		select mem_no from member where mem_id=#{mem_id}
 	</select>
+	
+	<select id="getmemId" parameterMap="String" resultType="String">
+		select mem_id from member where mem_no=#{mem_no}
+	</select>
+
 </mapper>

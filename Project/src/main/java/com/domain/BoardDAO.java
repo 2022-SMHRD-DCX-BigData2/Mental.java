@@ -121,6 +121,31 @@ public class BoardDAO {
 	      
 	      return boardList;
 	}
+	// Mem_no 가져오기
+		public String getmemId(String mem_no) {
+			String mem_id="";
+			try {
+
+				mem_id = sqlSession.selectOne("getmemNo",mem_no);
+
+				if (mem_id!=null) {
+
+					System.out.println("DAO : Get Mem_no 성공");
+					sqlSession.commit();
+
+				} else {
+
+					sqlSession.rollback();
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+			}
+			
+			return mem_id;
+		}
+	
 	
 	
 	
