@@ -40,13 +40,15 @@
   	<description></description>
   	<servlet-class>com.controller.DeleteCon</servlet-class>
   </servlet>
-
-	<servlet>
+  <servlet>
   	<servlet-name>WriteCon</servlet-name>
   	<display-name>WriteCon</display-name>
   	<description></description>
   	<servlet-class>com.controller.WriteCon</servlet-class>
   </servlet>
+
+
+
 	
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
@@ -76,6 +78,8 @@
   	<servlet-name>WriteCon</servlet-name>
   	<url-pattern>/WriteCon</url-pattern>
   </servlet-mapping>
+
+
   
 
 </web-app>

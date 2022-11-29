@@ -146,7 +146,34 @@ public class BoardDAO {
 			return mem_id;
 		}
 		
-	
+		// 게시글 가져오기
+		public Board view(int bd_num){
+			Board getboard = null;
+		      
+		      try {
+		         //               mapper.xml의 id값
+		    	  getboard = sqlSession.selectOne("view", bd_num);
+		         
+		         // 만약에 내가 원하는 일을 했으면 DB에 반영
+		         if(getboard != null) {
+		            System.out.println("DAO : 게시판view 성공!!");
+		            sqlSession.commit();
+		         }else {
+		            // 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
+		            sqlSession.rollback();
+		         }
+		         
+		         
+		      } catch (Exception e) {
+		         // TODO: handle exception
+		         e.printStackTrace();
+		      } finally {
+		         
+		      }
+		      
+		      
+		      return getboard;
+		}
 	
 	
 }

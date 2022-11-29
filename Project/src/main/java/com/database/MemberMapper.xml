@@ -45,5 +45,9 @@
 	<select id="getmemId" parameterType="String" resultType="String">
 		select mem_id from member where mem_no=#{mem_no}
 	</select>
+	
+	<select id="view" parameterType="int" resultType="com.domain.Board">
+		select * from board where bd_num=#{bd_num}
+	</select>
 
 </mapper>

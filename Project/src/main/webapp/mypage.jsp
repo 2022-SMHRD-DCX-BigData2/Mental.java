@@ -113,7 +113,7 @@
 
     <div class="input-group mb2">
         <label class="input-group-text" for="inputGroupSelect01">중분류</label>
-        <select class="form-select" id="inputGroupSelect01">
+        <select class="form-select" id="inputGroupSelect02">
           <option selected>자격증 분류</option>
           <option value="1">국가기술자격</option>
           <option value="2">국가전문자격</option>
@@ -124,13 +124,13 @@
       </div><br>
 
       <div class="input-group mb2">
-        <select class="form-select" id="inputGroupSelect01">
+        <select class="form-select" id="inputGroupSelect03">
           <option selected>등록할 자격증을 선택해주세요</option>
-          <option value="1">정보처리기사</option>
-          <option value="2">정보처리산업기사</option>
-          <option value="3">전자기기기능사</option>
-          <option value="4">정보보안기사</option>
-          <option value="5">빅데이터분석기사</option>
+          <option value="정보처리기사">정보처리기사</option>
+          <option value="정보처리산업기사">정보처리산업기사</option>
+          <option value="전자기기기능사">전자기기기능사</option>
+          <option value="정보보안기사">정보보안기사</option>
+          <option value="빅데이터분석기사">빅데이터분석기사</option>
         </select>
       </div><br>
    
@@ -152,7 +152,7 @@
         }
 
           $('.btn.btn-outline-primary').click(function(){
-              let com = $('input[type=text]').val() 
+              let com = $('#inputGroupSelect03').val() 
               let com2 = "<span>"+com+"<span><button class='removeCom'>삭제</button><br>"
               $('#com').append(com2)
               $('input').val('') 
