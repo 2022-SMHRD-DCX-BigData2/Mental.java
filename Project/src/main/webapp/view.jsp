@@ -112,13 +112,13 @@
         <div class="form-group">
         	<span style="display:inline-block; width: 100px; height: 50px;">제목</span>
             <span style="background-color:#ecf0f1; width: 795px; border: 1px solid #ced4da; border-radius: 10px; display: inline-block;"><%= board_view.getBd_title() %></span>
-           </div>
+        </div>
         <div class="form-group">
             <span style="display:inline-block ;width: 100px; ">작성자</span>
              <span style="background-color:#ecf0f1; width: 795px; border: 1px solid #ced4da; border-radius: 10px; display: inline-block;"><%=dao.getmemId(board_view.getMem_no())%></span>
            <br>
            <br>
-            </div>
+        </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1">내용</label>
             <div class="form-control" id="exampleFormControlTextarea1" name="contents" text-align="center" style="background-color:#ecf0f1; width: 900px; height:200px;">
