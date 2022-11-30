@@ -105,14 +105,13 @@
 		
 		
 		%>
-		<form action="updateBoard.jsp" method="post">    	
+		<form >    	
         <div class="form-group">
         		<p style="text-align:center; font-size: 30px; font-weight: 900;">게시글 보기</p>
         		<br>
         		
            <label for="exampleFormControlInput1">제목</label>
-           <input type="text" name="bd_num" value=<%=board_view.getBd_num() %>>
-           <h3 name="bd_title"><%= board_view.getBd_title() %></h3>
+           <h3><%= board_view.getBd_title() %></h3>
            <br>
           </div>
         <div class="form-group">
@@ -127,9 +126,10 @@
             </textarea>
             <br>
           </div>
-        <button  type="submit" class="btn btn-info" style ="background-color: light-green; margin:0 auto;" >수정하기</button>
+        <!-- <button onclick="updateBoard()" class="btn btn-info" style ="background-color: light-green; margin:0 auto;" >수정하기</button> -->
+        <a href="updateBoard.jsp?bd_num=<%=board_view.getBd_num()%>" class="btn btn-info" style ="background-color: light-green; margin:0 auto;">수정하기</a>
         <button class="btn btn-secondary" style ="background-color: light-green; margin:0 auto">목록으로</button>
-</form>
+	</form>
     </div>
 
         
@@ -150,6 +150,13 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <script type="text/javascript">
+    function updateBoard(){
+	    location.href='updateBoard.jsp?bd_num=<%=board_view.getBd_num()%>'
+    }
+    
+    </script>
 </body>
 
 </html>

@@ -99,7 +99,6 @@
         </div>
 
 		<%
-			request.setCharacterEncoding("UTF-8");
 			int bd_num = Integer.parseInt(request.getParameter("bd_num"));
 			BoardDAO dao = new BoardDAO();
 			Board board_view = dao.view(bd_num);
@@ -117,7 +116,6 @@
         <div class="form-group">
             <label for="exampleFormControlInput1">작성자</label>
             <h3><%=dao.getmemId(board_view.getMem_no()) %></h3>
-            <input name="bd_num" value=<%=board_view.getBd_num() %>>
             <br>
           </div>
           <div class="form-group">
