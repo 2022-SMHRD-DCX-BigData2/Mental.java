@@ -122,7 +122,7 @@ var calendar = $('#calendar').fullCalendar({
         });
         callback(fixedDate);
       }
-    });
+    });      
   },
 
   eventAfterAllRender: function (view) {
