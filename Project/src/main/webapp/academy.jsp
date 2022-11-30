@@ -103,12 +103,11 @@
         </div>
         <!-- Spinner End -->
 
-
         <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
+          <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="index.jsp" class="navbar-brand p-0">
-                    <img src="img/그림1.png">
+                    <img src="/Project/img/그림1.png">
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -125,29 +124,18 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
-                                <a href="team.html" class="dropdown-item">캘린더</a>
-                                <a href="testimonial.html" class="dropdown-item">추천 자격증</a>
-                                <a href="404.html" class="dropdown-item">회원정보 수정</a>
+                                <a href="#" class="dropdown-item">캘린더</a>
+                                <a href="mypage.jsp" class="dropdown-item">관심 자격증</a>
+                                <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
                             </div>
                         </div>
                         
                     </div>
                     <a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
-                    <a href="login.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
+                    <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
                 </div>
             </nav>
-
-            <div class="container-xxl py-5 bg-primary hero-header">
-                <div class="container my-5 py-5 px-lg-5">
-                    <div class="row g-5 py-5">
-                        <div class="col-12 text-center">
-                            <h1 class="text-white animated slideInDown">자격증 정보</h1>
-                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                             
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div>            
         </div>
         <!-- Navbar & Hero End -->
 
@@ -407,7 +395,7 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-
+    <script src="lib/wow/wow.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
