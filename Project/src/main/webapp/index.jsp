@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>DGital - Digital Agency HTML Template</title>
+    <title>자격증 플러스</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -48,12 +48,11 @@
         </div>
         <!-- Spinner End -->
 
-
+        <!-- Navbar & Hero Start -->
           <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="index.jsp" class="navbar-brand p-0">
-                    <img src="img/그림1.png">
-                  
+                    <img src="/Project/img/그림1.png">
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -71,7 +70,7 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
                                 <a href="#" class="dropdown-item">캘린더</a>
-                                <a href="mypage.jsp" class="dropdown-item">추천 자격증</a>
+                                <a href="mypage.jsp" class="dropdown-item">관심 자격증</a>
                                 <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
                             </div>
                         </div>
@@ -113,7 +112,8 @@
                             <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
-                            <img src="img/그림2.png" alt="Logo">
+                            <img src="/Project/img/그림2.png" alt="Logo">
+                            
                         </div>
                     </div>
                 </div>

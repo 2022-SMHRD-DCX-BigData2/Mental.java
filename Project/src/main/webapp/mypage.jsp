@@ -36,23 +36,13 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <style>
-         .title{
-         
-          	padding-top: 10px;
-          	
-            color: black;
 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            
-        }
         .select{
           max-width: 100%;
           width: 70%;
           margin: 50px auto 0px auto;
           box-shadow: 0px 0px 3px 0px gray;
+          
           padding: 20px;
         }
         .btn{
@@ -66,21 +56,27 @@
          .btn > button {
             margin-right: 10px;
         } 
+        
+        .con{
+		  color: blue;
+          margin: 10px auto 0px auto;
+    	  line-height: 1.75;
+	      overflow-x: auto;
+          background-color: #eee;
+	      padding: 20px; */
+          }
+          
     </style>
-    
 
 </head>
 <body>
-            
-  <div class="title">
-  	<h1 >마이페이지에서 타이틀 작성</h1>
-  </div>
+
   
       <div class="container-xxl py-5 bg-primary hero-header">
         <div class="container my-5 py-5 px-lg-5">
             <div class="row g-5 py-5">
                 <div class="col-12 text-center">
-                    <h1 class="text-white animated slideInDown">관심자격증</h1>
+                    <h1 class="text-white animated slideInDown">관심 자격증</h1>
                     <hr class="bg-white mx-auto mt-0" style="width: 90px;">
                 </div>
             </div> 
@@ -89,7 +85,7 @@
   
 
 
-
+<!-- 셀렉트박스 -->
   <div class="select">
     <div class="input-group mb1">
       <label class="input-group-text" for="inputGroupSelect01">대분류</label>
@@ -112,7 +108,7 @@
     </div><br>
 
     <div class="input-group mb2">
-        <label class="input-group-text" for="inputGroupSelect01">중분류</label>
+        <label class="input-group-text" for="inputGroupSelect02">중분류</label>
         <select class="form-select" id="inputGroupSelect02">
           <option selected>자격증 분류</option>
           <option value="1">국가기술자격</option>
@@ -131,6 +127,8 @@
           <option value="전자기기기능사">전자기기기능사</option>
           <option value="정보보안기사">정보보안기사</option>
           <option value="빅데이터분석기사">빅데이터분석기사</option>
+          <option value="빅데이터분석기사">정보시스템감리사</option>
+          <option value="빅데이터분석기사">전자계산기기사</option>
         </select>
       </div><br>
    
@@ -139,8 +137,8 @@
     </div>
   
   
-    <div id="com">
-        <!-- 등록버튼 클릭시 정보가  들어가는 공간 -->
+    <div class="con" id="com">
+        <!-- 등록하기 버튼 클릭시 정보가 들어가는 공간 -->
     </div>
 
 
