@@ -1,8 +1,15 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
+<%@page import="com.domain.Member"%>
 <%@page import="com.domain.Board"%>
 <%@page import="java.util.List"%>
 <%@page import="com.domain.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+	Member loginMember = (Member)session.getAttribute("loginMember");
+	
+%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,8 +109,8 @@
 			int bd_num = Integer.parseInt(request.getParameter("bd_num"));
 			BoardDAO dao = new BoardDAO();
 			Board board_view = dao.view(bd_num);
-		
-		
+			String mem_id = dao.getmemId(board_view.getMem_no());
+			
 		%>
 			
         	<p style="text-align:center; font-size: 30px; font-weight: 900; margin-top:revert;">게시글 보기</p>
@@ -115,7 +122,7 @@
         </div>
         <div class="form-group">
             <span style="display:inline-block ;width: 100px; ">작성자</span>
-             <span style="background-color:#ecf0f1; width: 795px; border: 1px solid #ced4da; border-radius: 10px; display: inline-block;"><%=dao.getmemId(board_view.getMem_no())%></span>
+             <span style="background-color:#ecf0f1; width: 795px; border: 1px solid #ced4da; border-radius: 10px; display: inline-block;"><%=mem_id%></span>
            <br>
            <br>
         </div>
@@ -126,9 +133,20 @@
             </div>
           </div>
         <!-- <button onclick="updateBoard()" class="btn btn-info" style ="background-color: light-green; margin:0 auto;" >수정하기</button> -->
+		
+			
+		
 		<div align="right" style="margin-right: 180px;">
-        <a href="updateBoard.jsp?bd_num=<%=board_view.getBd_num()%>"  class="btn btn-info"  style="color: white; ">수정하기</a>
-        <button class="btn btn-secondary" style ="text-align: right; color:white">목록으로</button>
+			<%if(loginMember == null){ %>
+	    	    <button class="btn btn-secondary" style ="text-align: right; color:white">목록으로</button>
+			<%}else if(mem_id.equals(loginMember.getmem_id())){%>
+		        <a href="updateBoard.jsp?bd_num=<%=board_view.getBd_num()%>"  class="btn btn-info"  style="color: white; ">수정하기</a>
+	    	    <button class="btn btn-secondary" style ="text-align: right; color:white">목록으로</button>
+        	<%}else{ %>
+	    	    <button class="btn btn-secondary" style ="text-align: right; color:white">목록으로</button>
+			<%} %>	
+			
+			
 		</div>
 	</form>
 	

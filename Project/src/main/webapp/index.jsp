@@ -1,10 +1,7 @@
 <%@page import="com.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<% 
 
-
-%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,18 +71,12 @@
                                 <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
                             </div>
                         </div>
-                       
-                       
                     </div>
-                    <a href="register.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
-                    <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
-                </div>
-               </nav>
                                   
               </div>
-                    <c:choose>
+                  <c:choose>
                   <c:when test="${empty loginMember}">
-                     <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
+                     <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인 </a>
                      <a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
                   </c:when>
                   <c:otherwise>
@@ -95,12 +86,13 @@
                         <a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
                      </c:if>
                      <c:if test="${loginMember.mem_id ne 'admin' }">
-                        <h1>${loginMember.mem_id}님 환영합니다~</h1>
+                        <span>${loginMember.mem_id}님 환영합니다~</span>
                         <a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
                      </c:if>
-                  </c:otherwise>
-               </c:choose>
+                	 </c:otherwise>
+               		 </c:choose>
               
+              	 </nav>
                 </div>
 				 
             <div class="container-xxl bg-primary hero-header">

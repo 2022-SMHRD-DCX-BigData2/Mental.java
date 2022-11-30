@@ -38,6 +38,9 @@ public class Member {
 		super();
 		this.mem_id = mem_id;
 	}
+	
+
+	
 
 	public Member(String mem_id, String mem_pw, String mem_email, String mem_name, String mem_tel) {
 		super();

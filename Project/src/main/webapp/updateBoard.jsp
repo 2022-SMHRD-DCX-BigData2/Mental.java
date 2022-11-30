@@ -127,7 +127,7 @@
             </textarea>
           </div>
 	<div align="right" style="margin-right: 10rem;">
-        <button type="submit" class="btn btn-info" style="color: white;">수정하기</button>
+        <button type="submit" class="btn btn-info" style="color: white;">수정완료</button>
         <button type="button" class="btn btn-secondary" style="color: white;" onclick="location.href='board.jsp'">목록으로</button>
 	</div>
 	</form>

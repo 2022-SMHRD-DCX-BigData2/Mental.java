@@ -10,7 +10,7 @@
     </insert>
 	<select id="selectMember" parameterType="com.domain.Member"
 	resultType="com.domain.Member">
-			select mem_id from member where mem_id=#{mem_id} and mem_pw=#{mem_pw}
+			select mem_id,mem_no from member where mem_id=#{mem_id} and mem_pw=#{mem_pw}
 			
 	</select>
 	
@@ -38,7 +38,8 @@
 		select * from board order by bd_date desc
 	</select>
 	
-	<select id="getmemNo" parameterType="String" resultType="String">
+	<select id="getmemNo" parameterType="String"
+	resultType="String">
 		select mem_no from member where mem_id=#{mem_id}
 	</select>
 	
