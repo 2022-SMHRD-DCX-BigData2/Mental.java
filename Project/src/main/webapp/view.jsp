@@ -126,7 +126,7 @@
             </div>
           </div>
         <!-- <button onclick="updateBoard()" class="btn btn-info" style ="background-color: light-green; margin:0 auto;" >수정하기</button> -->
-		<div align="right">
+		<div align="right" style="margin-right: 180px;">
         <a href="updateBoard.jsp?bd_num=<%=board_view.getBd_num()%>"  class="btn btn-info"  style="color: white; ">수정하기</a>
         <button class="btn btn-secondary" style ="text-align: right; color:white">목록으로</button>
 		</div>

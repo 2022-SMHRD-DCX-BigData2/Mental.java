@@ -105,29 +105,31 @@
 			
 		
 		%>
-      		<p style="text-align:center; font-size: 30px; font-weight: 900; margin-top: revert;">게시글 보기</p>
+      		<p style="text-align:center; font-size: 30px; font-weight: 900; margin-top: revert;">게시글 수정</p>
       		<br>
-		<form action="UpdateBoard" method="post">    	
+		<form action="UpdateBoard" method="post" style="margin-left: 10rem; font-size: 20px;">    	
         <div class="form-group">
               <label for="exampleFormControlInput1">제목</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="제목을 수정해주세요." value=<%=board_view.getBd_title() %>>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="title" placeholder="제목을 수정해주세요." 
+            			style="width: 1000px" 	value=<%=board_view.getBd_title() %>>
             <br>
           </div>
         <div class="form-group">
-            <label for="exampleFormControlInput1">작성자</label>
-            <h3><%=dao.getmemId(board_view.getMem_no()) %></h3>
-            <br>
+            <span style="display:inline-block ;width: 100px; ">작성자</span> <br>
+             <span style="background-color:#ecf0f1; width: 1000px; border: 1px solid #ced4da; border-radius: 10px; display: inline-block;"><%=dao.getmemId(board_view.getMem_no())%></span>
+           <br>
+           <br>
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1">내용</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" name="contents" rows="10">
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="contents" rows="10" style="width: 1000px">
             <%=board_view.getBd_contents() %>
             </textarea>
-            <br>
           </div>
-
-        <button type="submit" class="btn btn-info" style ="background-color: light-green; margin:0 auto;">수정하기</button>
-        <button type="button" class="btn btn-secondary" style ="background-color: light-green; margin:0 auto" onclick="location.href='board.jsp'">목록으로</button>
+	<div align="right" style="margin-right: 10rem;">
+        <button type="submit" class="btn btn-info" style="color: white;">수정하기</button>
+        <button type="button" class="btn btn-secondary" style="color: white;" onclick="location.href='board.jsp'">목록으로</button>
+	</div>
 	</form>
     </div>
 
