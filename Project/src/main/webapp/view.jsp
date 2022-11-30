@@ -105,37 +105,44 @@
 		
 		
 		%>
-		<form >    	
+			
+        	<p style="text-align:center; font-size: 30px; font-weight: 900; margin-top:revert;">게시글 보기</p>
+        	<br>
+		<form style="margin-left: 15rem; font-size: 20px;">    	
         <div class="form-group">
-        		<p style="text-align:center; font-size: 30px; font-weight: 900;">게시글 보기</p>
-        		<br>
-        		
-           <label for="exampleFormControlInput1">제목</label>
-           <h3><%= board_view.getBd_title() %></h3>
+        	<span style="display:inline-block; width: 100px; height: 50px;">제목</span>
+            <span style="background-color:#ecf0f1; width: 795px; border: 1px solid #ced4da; border-radius: 10px; display: inline-block;"><%= board_view.getBd_title() %></span>
+           </div>
+        <div class="form-group">
+            <span style="display:inline-block ;width: 100px; ">작성자</span>
+             <span style="background-color:#ecf0f1; width: 795px; border: 1px solid #ced4da; border-radius: 10px; display: inline-block;"><%=dao.getmemId(board_view.getMem_no())%></span>
            <br>
-          </div>
-        <div class="form-group">
-            <label for="exampleFormControlInput1">작성자</label>
-            <h3><%=dao.getmemId(board_view.getMem_no())%></h3>
-            <br>
-          </div>
+           <br>
+            </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1">내용</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" name="contents" rows="10">
+            <div class="form-control" id="exampleFormControlTextarea1" name="contents" text-align="center" style="background-color:#ecf0f1; width: 900px; height:200px;">
             	<%= board_view.getBd_contents() %>
-            </textarea>
-            <br>
+            </div>
           </div>
         <!-- <button onclick="updateBoard()" class="btn btn-info" style ="background-color: light-green; margin:0 auto;" >수정하기</button> -->
-        <a href="updateBoard.jsp?bd_num=<%=board_view.getBd_num()%>" class="btn btn-info" style ="background-color: light-green; margin:0 auto;">수정하기</a>
-        <button class="btn btn-secondary" style ="background-color: light-green; margin:0 auto">목록으로</button>
+		<div align="right">
+        <a href="updateBoard.jsp?bd_num=<%=board_view.getBd_num()%>"  class="btn btn-info"  style="color: white; ">수정하기</a>
+        <button class="btn btn-secondary" style ="text-align: right; color:white">목록으로</button>
+		</div>
 	</form>
+	
+	
+	
+	
+	
     </div>
+  
 
         
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
