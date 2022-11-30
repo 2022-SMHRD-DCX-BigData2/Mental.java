@@ -74,7 +74,8 @@
                                 <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
                             </div>
                         </div>
-                        
+                       
+                       
                     </div>
                     <a href="register.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
                     <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
