@@ -51,7 +51,7 @@
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
+                <a href="index.jsp" class="navbar-brand p-0">
                     <img src="img/그림1.png">
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
@@ -60,9 +60,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="index.jsp" class="nav-item nav-link active">Home</a>
-                        <a href="certificate.jsp" class="nav-item nav-link">적성검사</a>
-                        <a href="./Calendar/Calendar.html" class="nav-item nav-link">자격증 캘린더</a>
+                         <a href="index.jsp" class="nav-item nav-link active">Home</a>
+                        <a href="recruitment.html" class="nav-item nav-link">채용정보</a>
+                        <a href="./Calendar/Calendar.jsp" class="nav-item nav-link">자격증 캘린더</a>
                         <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
                         <a href="board.jsp" class="nav-item nav-link">커뮤니티</a>
                         
@@ -70,13 +70,13 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
                                 <a href="#" class="dropdown-item">캘린더</a>
-                                <a href="#" class="dropdown-item">추천 자격증</a>
+                                <a href="#" class="dropdown-item">관심 자격증</a>
                                 <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
                             </div>
                         </div>
                         
                     </div>
-                    <a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
+                    <a href="register.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
                     <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
                 </div>
             </nav>

@@ -117,7 +117,7 @@
                     <div class="navbar-nav mx-auto py-0">
                         <a href="index.jsp" class="nav-item nav-link active">Home</a>
                         <a href="recruitment.html" class="nav-item nav-link">채용정보</a>
-                        <a href="./Calendar/Calendar.html" class="nav-item nav-link">자격증 캘린더</a>
+                        <a href="./Calendar/Calendar.jsp" class="nav-item nav-link">자격증 캘린더</a>
                         <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
                         <a href="board.jsp" class="nav-item nav-link">커뮤니티</a>
                         
@@ -131,7 +131,7 @@
                         </div>
                         
                     </div>
-                    <a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
+                    <a href="register.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
                     <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
                 </div>
             </nav>
