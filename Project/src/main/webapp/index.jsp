@@ -62,14 +62,14 @@
                     <div class="navbar-nav mx-auto py-0">
                         <a href="index.jsp" class="nav-item nav-link active">Home</a>
                         <a href="recruitment.html" class="nav-item nav-link">채용정보</a>
-                        <a href="./Calendar/Calendar.html" class="nav-item nav-link">자격증 캘린더</a>
+                        <a href="./Calendar/Calendar.jsp" class="nav-item nav-link">자격증 캘린더</a>
                         <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
                         <a href="board.jsp" class="nav-item nav-link">커뮤니티</a>
                         
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
-                                <a href="#" class="dropdown-item">캘린더</a>
+                                <a href="/Project/Calendar/mypageCalendar.jsp" class="dropdown-item">캘린더</a>
                                 <a href="mypage.jsp" class="dropdown-item">관심 자격증</a>
                                 <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
                             </div>
@@ -79,9 +79,9 @@
                     <a href="register.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
                     <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
                 </div>
-            </nav>
-                        
-                    </div>
+               </nav>
+                                  
+              </div>
                     <c:choose>
                   <c:when test="${empty loginMember}">
                      <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
@@ -99,8 +99,9 @@
                      </c:if>
                   </c:otherwise>
                </c:choose>
+              
                 </div>
-
+				 
             <div class="container-xxl bg-primary hero-header">
                 <div class="container px-lg-5">
                     <div class="row g-5 align-items-end">

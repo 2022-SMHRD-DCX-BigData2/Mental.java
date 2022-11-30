@@ -37,15 +37,15 @@
     <title>Calendar</title>
     <link rel="shortcut icon" href="image/favicon.ico">
 
-    <link rel="stylesheet" href="vendor/css/fullcalendar.min.css" />
-    <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
-    <link rel="stylesheet" href='vendor/css/select2.min.css' />
-    <link rel="stylesheet" href='vendor/css/bootstrap-datetimepicker.min.css' />
+    <link rel="stylesheet" href="/Project/Calendar/vendor/css/fullcalendar.min.css" />
+    <link rel="stylesheet" href="/Project/Calendar/vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href='/Project/Calendar/vendor/css/select2.min.css' />
+    <link rel="stylesheet" href='/Project/Calendar/vendor/css/bootstrap-datetimepicker.min.css' />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/Project/Calendar/css/main.css">
     
     
 
@@ -65,7 +65,7 @@
           <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="../index.jsp" class="navbar-brand p-0">
-                    <img src="../img/그림1.png">
+                    <img src="/Project/img/그림1.png">
                   
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
@@ -76,14 +76,14 @@
                     <div class="navbar-nav mx-auto py-0">
                         <a href="../index.jsp" class="nav-item nav-link active">Home</a>
                         <a href="../recruitment.html" class="nav-item nav-link">채용정보</a>
-                        <a href="Calendar.html" class="nav-item nav-link">자격증 캘린더</a>
+                        <a href="Calendar.jsp" class="nav-item nav-link">자격증 캘린더</a>
                         <a href="../academy.jsp" class="nav-item nav-link">주변학원찾기</a>
                         <a href="../board.jsp" class="nav-item nav-link">커뮤니티</a>
                         
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
-                                <a href="#" class="dropdown-item">캘린더</a>
+                                <a href="mypageCalendar.jsp" class="dropdown-item">캘린더</a>
                                 <a href="../mypage.jsp" class="dropdown-item">추천 자격증</a>
                                 <a href="../update.jsp" class="dropdown-item">회원정보 수정</a>
                             </div>
@@ -330,31 +330,31 @@
     </div>
     <!-- /.container -->
 
-    <script src="vendor/js/jquery.min.js"></script>
-    <script src="vendor/js/bootstrap.min.js"></script>
-    <script src="vendor/js/moment.min.js"></script>
-    <script src="vendor/js/fullcalendar.min.js"></script>
-    <script src="vendor/js/ko.js"></script>
-    <script src="vendor/js/select2.min.js"></script>
-    <script src="vendor/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/addEvent.js"></script>
-    <script src="js/editEvent.js"></script>
-    <script src="js/etcSetting.js"></script>
+    <script src="/Project/Calendar/vendor/js/jquery.min.js"></script>
+    <script src="/Project/Calendar/vendor/js/bootstrap.min.js"></script>
+    <script src="/Project/Calendar/vendor/js/moment.min.js"></script>
+    <script src="/Project/Calendar/vendor/js/fullcalendar.min.js"></script>
+    <script src="/Project/Calendar/vendor/js/ko.js"></script>
+    <script src="/Project/Calendar/vendor/js/select2.min.js"></script>
+    <script src="/Project/Calendar/vendor/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/Project/Calendar/js/main.js"></script>
+    <script src="/Project/Calendar/js/addEvent.js"></script>
+    <script src="/Project/Calendar/js/editEvent.js"></script>
+    <script src="/Project/Calendar/js/etcSetting.js"></script>
     
     
    <!-- JavaScript Libraries -->
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="/Project/Calendar/lib/wow/wow.min.js"></script>
+    <script src="/Project/Calendar/lib/easing/easing.min.js"></script>
+    <script src="/Project/Calendar/lib/waypoints/waypoints.min.js"></script>
+    <script src="/Project/Calendar/lib/counterup/counterup.min.js"></script>
+    <script src="/Project/Calendar/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/Project/Calendar/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="/Project/Calendar/lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main1.js"></script>
+    <script src="/Project/Calendar/js/main1.js"></script>
 </body>
 </html>
