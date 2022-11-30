@@ -135,8 +135,8 @@
                     <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
                 </div>
             </nav>
-                        
-                    </div>
+            </div>            
+        </div>
         <!-- Navbar & Hero End -->
 
 
@@ -395,7 +395,7 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-
+    <script src="lib/wow/wow.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
