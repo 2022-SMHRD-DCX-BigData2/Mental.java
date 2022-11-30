@@ -63,11 +63,7 @@
             <a href="#" class="small mr-3"><span class="icon-envelope mr-2"></span> <span class="d-none d-lg-inline-block">info@mydomain.com</span></a> 
           </div> -->
 
-          <div class="col-6 col-lg-3 text-right">
-            <a href="login.html" class="small mr-3">
-              <span class="icon-lock"></span>
-              로그인하기
-            </a>
+        
             <!-- <a href="register.html" class="small">
               <span class="icon-person"></span>
               회원가입
