@@ -53,10 +53,6 @@
   	<servlet-class>com.controller.UpdateBoard</servlet-class>
   </servlet>
 
-<<<<<<< HEAD
-    
-=======
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/Mental.java.git
 
 
 	
@@ -92,11 +88,6 @@
   	<servlet-name>UpdateBoard</servlet-name>
   	<url-pattern>/UpdateBoard</url-pattern>
   </servlet-mapping>
-<<<<<<< HEAD
-  
-=======
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/Mental.java.git
-
 
   
 
