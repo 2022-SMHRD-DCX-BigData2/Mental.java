@@ -52,6 +52,7 @@
   	<description></description>
   	<servlet-class>com.controller.UpdateBoard</servlet-class>
   </servlet>
+ 
 
 
 
@@ -88,6 +89,7 @@
   	<servlet-name>UpdateBoard</servlet-name>
   	<url-pattern>/UpdateBoard</url-pattern>
   </servlet-mapping>
+
 
 
   
