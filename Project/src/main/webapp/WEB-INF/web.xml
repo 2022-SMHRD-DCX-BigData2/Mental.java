@@ -52,9 +52,24 @@
   	<description></description>
   	<servlet-class>com.controller.UpdateBoard</servlet-class>
   </servlet>
+<<<<<<< HEAD
  
+=======
+    <servlet>
+  	<servlet-name>WriteConRecruitmentBoard</servlet-name>
+  	<display-name>WriteConRecruitmentBoard</display-name>
+  	<description></description>
+  	<servlet-class>com.controller.WriteConRecruitmentBoard</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateRecruitmentBoard</servlet-name>
+  	<display-name>UpdateRecruitmentBoard</display-name>
+  	<description></description>
+  	<servlet-class>com.controller.UpdateRecruitmentBoard</servlet-class>
+  </servlet>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/Mental.java.git
 
-
+  
 
 	
   <servlet-mapping>
@@ -89,7 +104,14 @@
   	<servlet-name>UpdateBoard</servlet-name>
   	<url-pattern>/UpdateBoard</url-pattern>
   </servlet-mapping>
-
+  <servlet-mapping>
+  	<servlet-name>WriteConRecruitmentBoard</servlet-name>
+  	<url-pattern>/WriteConRecruitmentBoard</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateRecruitmentBoard</servlet-name>
+  	<url-pattern>/UpdateRecruitmentBoard</url-pattern>
+  </servlet-mapping>
 
 
   
