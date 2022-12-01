@@ -62,14 +62,14 @@ public class RecruitmentBoardDAO {
 	
 	
 	// 게시글 쓰기
-	public int insertBoard(RecruitmentBoard newBoard) {
+	public int insertRecruitmentBoard(RecruitmentBoard newBoard) {
 		int cnt = 0;
 		try {
 
 			// sqlSession.insert ( " Mapper.xml의 id값 " , " " )
 			// insert할 때 써먹을 값을 joinMember 야 ~~~
 			// 매개변수가 없다고 하면 id만 적어주면 된다.
-			cnt = sqlSession.insert("insertBoard", newBoard);
+			cnt = sqlSession.insert("insertRecruitmentBoard", newBoard);
 
 			// DB연결은 되던지 안 되던지
 			// 만약에 내가 원하는 일을 했으면
@@ -94,12 +94,12 @@ public class RecruitmentBoardDAO {
 	} // 게시판 등록 끝!
 	
 	// 게시판 전체 검색
-	public List<RecruitmentBoard> getList(){
+	public List<RecruitmentBoard> getRecruitmentList(){
 		List<RecruitmentBoard> boardList = null;
 	      
 	      try {
 	         //               mapper.xml의 id값
-	    	  boardList = sqlSession.selectList("getList");
+	    	  boardList = sqlSession.selectList("getRecruitmentList");
 	         
 	         // 만약에 내가 원하는 일을 했으면 DB에 반영
 	         if(boardList != null) {
@@ -148,12 +148,12 @@ public class RecruitmentBoardDAO {
 		}
 		
 		// 게시글 가져오기
-		public RecruitmentBoard recruitmentView(int bd_num){
+		public RecruitmentBoard RecruitmentView(int bd_num){
 			RecruitmentBoard getboard = null;
 		      
 		      try {
 		         //               mapper.xml의 id값
-		    	  getboard = sqlSession.selectOne("recruitmentView", bd_num);
+		    	  getboard = sqlSession.selectOne("RecruitmentView", bd_num);
 		         
 		         // 만약에 내가 원하는 일을 했으면 DB에 반영
 		         if(getboard != null) {

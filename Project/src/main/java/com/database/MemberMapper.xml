@@ -57,20 +57,20 @@
 	
 
 	<!-- 채용정보 -->
-	<insert id="insertBoard_job" parameterType="com.domain.RecruitmentBoard">
-		insert into job_advrts(bd_num,mem_no,bd_title,bd_contents,bd_date) values(sequence_RecruitmentBoard.nextval,#{mem_no},#{bd_title},#{bd_contents},#{bd_date})
+	<insert id="insertRecruitmentBoard" parameterType="com.domain.RecruitmentBoard">
+		insert into advrt(bd_num,mem_no,bd_title,bd_contents,bd_date) values(sequence_RecruitmentBoard.nextval,#{mem_no},#{bd_title},#{bd_contents},#{bd_date})
 	</insert>
 	
-	<select id="getList_job" resultType="com.domain.RecruitmentBoard">
-		select * from job_advrts order by bd_date desc
+	<select id="getRecruitmentList" resultType="com.domain.RecruitmentBoard">
+		select * from advrt order by bd_date desc
 	</select>
 	
-	<select id="recruitmentView" parameterType="int" resultType="com.domain.RecruitmentBoard">
-		select * from job_advrts where bd_num=#{bd_num}
+	<select id="RecruitmentView" parameterType="int" resultType="com.domain.RecruitmentBoard">
+		select * from advrt where bd_num=#{bd_num}
 	</select>
 	
 	<update id="UpdateRecruitmentBoard" parameterType="com.domain.RecruitmentBoard">
-		update job_advrts set bd_title=#{bd_title}, bd_contents=#{bd_contents} where bd_num=#{bd_num}
+		update advrt set bd_title=#{bd_title}, bd_contents=#{bd_contents} where bd_num=#{bd_num}
 	</update>
 
 

@@ -34,7 +34,7 @@ public class WriteConRecruitmentBoard extends HttpServlet {
 		System.out.println(bd_date);
 		
 		RecruitmentBoard newBoard = new RecruitmentBoard(mem_no,bd_title,bd_contents,bd_date);
-		int cnt =  dao.insertBoard(newBoard);
+		int cnt =  dao.insertRecruitmentBoard(newBoard);
 		if(cnt > 0 ) {
 			System.out.println("WriteConRecruitmentBoard : 채용정보 글쓰기 성공!! ");
 			response.sendRedirect("recruitment.jsp"); // 게시판 기능 만든 후 추후 작성 
