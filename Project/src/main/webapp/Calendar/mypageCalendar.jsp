@@ -47,7 +47,9 @@
 
     <link rel="stylesheet" href="/Project/Calendar/css/main.css">
     
-    
+    <style>
+     .checkbox-inline{display:inline-block; width:100px; line-height:20px; }
+    </style>
 
 </head>
 
@@ -346,7 +348,7 @@
    <!-- JavaScript Libraries --> 
   
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+   
     <script src="/Project/Calendar/lib/wow/wow.min.js"></script>
     <script src="/Project/Calendar/lib/easing/easing.min.js"></script>
     <script src="/Project/Calendar/lib/waypoints/waypoints.min.js"></script>
