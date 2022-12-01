@@ -7,12 +7,12 @@
 
 
 <head>
-    <meta charset="utf-8">
-    <title>자격증 플러스</title>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
-
+ 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
@@ -26,15 +26,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="/Project/Calendar/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/Project/Calendar/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/Project/Calendar/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Project/Calendar/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/Project/Calendar/css/style.css" rel="stylesheet">
+    
+    
+    <title>Calendar</title>
+    <link rel="shortcut icon" href="image/favicon.ico">
+
+    <link rel="stylesheet" href="/Project/Calendar/vendor/css/fullcalendar.min.css" />
+    <link rel="stylesheet" href="/Project/Calendar/vendor/css/bootstrap.min.css">
+    <link rel="stylesheet" href='/Project/Calendar/vendor/css/select2.min.css' />
+    <link rel="stylesheet" href='/Project/Calendar/vendor/css/bootstrap-datetimepicker.min.css' />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="/Project/Calendar/css/main.css">
+    
+    
 </head>
 
 <body>
@@ -50,7 +66,7 @@
         <!-- Navbar & Hero Start -->
            <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="index.jsp" class="navbar-brand p-0">
+                <a href="../index.jsp" class="navbar-brand p-0">
                     <img src="/Project/img/그림1.png">
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
@@ -59,11 +75,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                       <a href="index.jsp" class="nav-item nav-link active">Home</a>
-                        <a href="recruitment.html" class="nav-item nav-link">채용정보</a>
-                        <a href="./Calendar/Calendar.jsp" class="nav-item nav-link">자격증 캘린더</a>
-                        <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
-                        <a href="board.jsp" class="nav-item nav-link">커뮤니티</a>
+                       <a href="../index.jsp" class="nav-item nav-link active">Home</a>
+                        <a href="../recruitment.html" class="nav-item nav-link">채용정보</a>
+                        <a href="/Project/Calendar/Calendar.jsp" class="nav-item nav-link">자격증 캘린더</a>
+                        <a href="../academy.jsp" class="nav-item nav-link">주변학원찾기</a>
+                        <a href="../board.jsp" class="nav-item nav-link">커뮤니티</a>
                         
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
@@ -75,8 +91,8 @@
                         </div>
                         
                     </div>
-                    <a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
-                    <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
+                    <a href="../register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
+                    <a href="../login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
                 </div>
             </nav>
                         
@@ -102,18 +118,7 @@
         <!-- Navbar & Hero End -->
      
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+  
+    
 </body>
 </html>
