@@ -6,8 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import com.database.SqlSessionManager;
 
-public class BoardDAO {
-
+public class RecruitmentBoardDAO {
+	
 	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	SqlSession sqlSession = sqlSessionFactory.openSession();
 	
@@ -62,7 +62,7 @@ public class BoardDAO {
 	
 	
 	// 게시글 쓰기
-	public int insertBoard(Board newBoard) {
+	public int insertBoard(RecruitmentBoard newBoard) {
 		int cnt = 0;
 		try {
 
@@ -75,7 +75,7 @@ public class BoardDAO {
 			// 만약에 내가 원하는 일을 했으면
 			if (cnt > 0) {
 
-				System.out.println("DAO : 게시판등록 성공!");
+				System.out.println("DAO : 채용정보 게시판등록 성공!");
 				sqlSession.commit();
 
 			} else {
@@ -94,8 +94,8 @@ public class BoardDAO {
 	} // 게시판 등록 끝!
 	
 	// 게시판 전체 검색
-	public List<Board> getList(){
-		List<Board> boardList = null;
+	public List<RecruitmentBoard> getList(){
+		List<RecruitmentBoard> boardList = null;
 	      
 	      try {
 	         //               mapper.xml의 id값
@@ -103,7 +103,7 @@ public class BoardDAO {
 	         
 	         // 만약에 내가 원하는 일을 했으면 DB에 반영
 	         if(boardList != null) {
-	            System.out.println("DAO : 게시판전체검색 성공!!");
+	            System.out.println("DAO : 채용정보 게시판전체검색 성공!!");
 	            sqlSession.commit();
 	         }else {
 	            // 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
@@ -148,16 +148,16 @@ public class BoardDAO {
 		}
 		
 		// 게시글 가져오기
-		public Board view(int bd_num){
-			Board getboard = null;
+		public RecruitmentBoard recruitmentView(int bd_num){
+			RecruitmentBoard getboard = null;
 		      
 		      try {
 		         //               mapper.xml의 id값
-		    	  getboard = sqlSession.selectOne("view", bd_num);
+		    	  getboard = sqlSession.selectOne("recruitmentView", bd_num);
 		         
 		         // 만약에 내가 원하는 일을 했으면 DB에 반영
 		         if(getboard != null) {
-		            System.out.println("DAO : 게시판view 성공!!");
+		            System.out.println("DAO : 채용정보 게시판view 성공!!");
 		            sqlSession.commit();
 		         }else {
 		            // 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
@@ -177,15 +177,15 @@ public class BoardDAO {
 		}
 		
 		// 게시판 수정 기능 구현
-		public int updateBoard(Board update_board) {
+		public int UpdateRecruitmentBoard(RecruitmentBoard update_board) {
 			int cnt = 0;
 			try {
 
-				cnt = sqlSession.insert("updateBoard", update_board);
+				cnt = sqlSession.insert("UpdateRecruitmentBoard", update_board);
 
 				if (cnt > 0) {
 
-					System.out.println("DAO : 게시판수정 성공!");
+					System.out.println("DAO : 채용정보 게시판수정 성공!");
 					sqlSession.commit();
 
 				} else {
