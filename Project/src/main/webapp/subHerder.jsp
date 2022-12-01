@@ -59,16 +59,16 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="index.jsp" class="nav-item nav-link active">Home</a>
+                       <a href="index.jsp" class="nav-item nav-link active">Home</a>
                         <a href="recruitment.html" class="nav-item nav-link">채용정보</a>
-                        <a href="./Calendar/Calendar.html" class="nav-item nav-link">자격증 캘린더</a>
+                        <a href="./Calendar/Calendar.jsp" class="nav-item nav-link">자격증 캘린더</a>
                         <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
                         <a href="board.jsp" class="nav-item nav-link">커뮤니티</a>
                         
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
-                                <a href="#" class="dropdown-item">캘린더</a>
+                                <a href="/Project/Calendar/mypageCalendar.jsp" class="dropdown-item">캘린더</a>
                                 <a href="mypage.jsp" class="dropdown-item">관심 자격증</a>
                                 <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
                             </div>
@@ -101,11 +101,6 @@
                 </div>
         <!-- Navbar & Hero End -->
      
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
