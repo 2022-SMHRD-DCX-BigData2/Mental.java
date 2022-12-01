@@ -89,7 +89,6 @@
   	<url-pattern>/UpdateBoard</url-pattern>
   </servlet-mapping>
 
-
   
 
 </web-app>
