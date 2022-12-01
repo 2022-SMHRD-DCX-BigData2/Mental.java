@@ -47,6 +47,9 @@
 
     <link rel="stylesheet" href="css/main.css">
     
+    <style>
+     .checkbox-inline{display:inline-block; width:100px; line-height:20px; }
+    </style>
     
 
 </head>
@@ -206,8 +209,8 @@
 
                 <div class="col-lg-6">
                     <label for="calendar_view">시험일정</label>
-                    <div class="input-group">
-                        <label class="checkbox-inline"><input class='filter' type="checkbox" value="접수기간"
+                    <div class="input-group" >
+                        <label class="checkbox-inline"><input class='filter'  type="checkbox" value="접수기간"
                                 checked>접수기간</label>
                         <label class="checkbox-inline"><input class='filter' type="checkbox" value="시험일"
                                 checked>시험일</label>
@@ -345,7 +348,7 @@
     
    <!-- JavaScript Libraries -->
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
