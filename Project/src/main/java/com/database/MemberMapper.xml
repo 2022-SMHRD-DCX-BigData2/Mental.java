@@ -56,22 +56,4 @@
 	</update>
 	
 
-	<!-- 채용정보 -->
-	<insert id="insertRecruitmentBoard" parameterType="com.domain.RecruitmentBoard">
-		insert into advrt(bd_num,mem_no,bd_title,bd_contents,bd_date) values(sequence_RecruitmentBoard.nextval,#{mem_no},#{bd_title},#{bd_contents},#{bd_date})
-	</insert>
-	
-	<select id="getRecruitmentList" resultType="com.domain.RecruitmentBoard">
-		select * from advrt order by bd_date desc
-	</select>
-	
-	<select id="RecruitmentView" parameterType="int" resultType="com.domain.RecruitmentBoard">
-		select * from advrt where bd_num=#{bd_num}
-	</select>
-	
-	<update id="UpdateRecruitmentBoard" parameterType="com.domain.RecruitmentBoard">
-		update advrt set bd_title=#{bd_title}, bd_contents=#{bd_contents} where bd_num=#{bd_num}
-	</update>
-
-
 </mapper>
