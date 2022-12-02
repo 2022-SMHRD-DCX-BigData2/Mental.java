@@ -96,18 +96,18 @@
               </div>
                   <c:choose>
                   <c:when test="${empty loginMember}">
-                     <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인 </a>
-                     <a href="register.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
+                     <a href="../login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인 </a>
+                     <a href="../register.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
                   </c:when>
                   <c:otherwise>
                      <!-- 문자열 비교는 eq -->
                      <c:if test="${loginMember.mem_id eq 'admin' }">
-                        <a href="select.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원관리</a>
-                        <a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
+                        <a href="../select.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원관리</a>
+                        <a href="../LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
                      </c:if>
                      <c:if test="${loginMember.mem_id ne 'admin' }">
                         <span>${loginMember.mem_id}님 환영합니다~</span>
-                        <a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
+                        <a href="../LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
                      </c:if>
                 	 </c:otherwise>
                		 </c:choose>
