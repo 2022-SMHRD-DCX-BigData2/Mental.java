@@ -97,7 +97,7 @@
                   <c:choose>
                   <c:when test="${empty loginMember}">
                      <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인 </a>
-                     <a href="register.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
+                     <a href="register.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
                   </c:when>
                   <c:otherwise>
                      <!-- 문자열 비교는 eq -->

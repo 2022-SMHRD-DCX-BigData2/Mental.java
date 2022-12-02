@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page import="com.domain.Member"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +37,7 @@
 </head>
 
 <body>
-    <div class="container-xxl bg-white p-0">
+   <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -44,12 +46,11 @@
         </div>
         <!-- Spinner End -->
 
-
         <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
+          <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <img src="img/그림1.png">
+                <a href="index.jsp" class="navbar-brand p-0">
+                    <img src="/Project/img/그림1.png">
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -58,7 +59,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
                         <a href="index.jsp" class="nav-item nav-link active">Home</a>
-                        <a href="recruitment.html" class="nav-item nav-link">채용정보</a>
+                        <a href="recruitment.jsp" class="nav-item nav-link">채용정보</a>
                         <a href="./Calendar/Calendar.jsp" class="nav-item nav-link">자격증 캘린더</a>
                         <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
                         <a href="board.jsp" class="nav-item nav-link">커뮤니티</a>
@@ -71,14 +72,29 @@
                                 <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
                             </div>
                         </div>
-                        
                     </div>
-                    <a href="register.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
-                    <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인</a>
+                                  
+              </div>
+                  <c:choose>
+                  <c:when test="${empty loginMember}">
+                     <a href="login.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그인 </a>
+                     <a href="register.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원가입</a>
+                  </c:when>
+                  <c:otherwise>
+                     <!-- 문자열 비교는 eq -->
+                     <c:if test="${loginMember.mem_id eq 'admin' }">
+                        <a href="select.jsp" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">회원관리</a>
+                        <a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
+                     </c:if>
+                     <c:if test="${loginMember.mem_id ne 'admin' }">
+                        <span>${loginMember.mem_id}님 환영합니다~</span>
+                        <a href="LogoutCon" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">로그아웃</a>
+                     </c:if>
+                	 </c:otherwise>
+               		 </c:choose>
+              
+              	 </nav>
                 </div>
-            </nav>
-
-
 
 
 
