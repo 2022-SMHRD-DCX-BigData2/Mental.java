@@ -65,7 +65,12 @@
   	<description></description>
   	<servlet-class>com.controller.UpdateRecruitmentBoard</servlet-class>
   </servlet>
-
+<servlet>
+  	<servlet-name>Calendar_Reg_send</servlet-name>
+  	<display-name>Calendar_Reg_send</display-name>
+  	<description></description>
+  	<servlet-class>com.controller.Calendar_Reg_send</servlet-class>
+  </servlet>
 
 	
   <servlet-mapping>
@@ -107,6 +112,10 @@
   <servlet-mapping>
   	<servlet-name>UpdateRecruitmentBoard</servlet-name>
   	<url-pattern>/UpdateRecruitmentBoard</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Calendar_Reg_send</servlet-name>
+  	<url-pattern>/Calendar_Reg_send</url-pattern>
   </servlet-mapping>
 
 

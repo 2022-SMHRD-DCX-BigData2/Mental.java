@@ -142,7 +142,7 @@ var calendar = $('#calendar').fullCalendar({
       type: "get",
       url: "",
       data: {
-        //id: event._id,
+        //id: event.id,
         //....
       },
       success: function (response) {
