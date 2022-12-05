@@ -117,9 +117,9 @@
 
         <!-- Service Start -->
         <!-- 게시판 시작 -->
+        <div class="container">
            <input type="text" class="form-control" name="search" placeholder="검색어를 입력해 주세요." >
                 <button class="btn btn-primary" >검색</button>
-        <div class="container">
             <div class="row table-div">
                 <table class="table-setting" >
                     <thead>
