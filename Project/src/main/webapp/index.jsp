@@ -170,8 +170,8 @@
                                 <i class="fa bi-ui-checks fa-2x"></i>
                             </div>
                             <h5 class="mb-3">채용정보</h5>
-                            <p class="m-0">IT직무와 관련한 역량을 인/적성 측면으로 측정하여 적합도를 확인할 수 있습니다. </p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                            <p class="m-0">구인구직, 직업훈련 등 채용과 관련된 정보를 공유하는 소통의 공간이 됩니다. </p>
+                            <a class="btn btn-square" href="recruitment.jsp"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6  fadeInUp" data--delay="0.3s">
@@ -180,8 +180,8 @@
                                 <i class="fa bi-card-list fa-2x"></i>
                             </div>
                             <h5 class="mb-3">자격증정보</h5>
-                            <p class="m-0">자격증과 관련된 정보를 공유하는 소통의 공간이 됩니다. </p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                            <p class="m-0">자격증과 관련된 정보를 공유하는 소통의 공간이 됩니다.</p>
+                            <a class="btn btn-square" href="board2.jsp"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6  fadeInUp" data--delay="0.5s">
@@ -189,8 +189,8 @@
                             <div class="service-icon flex-shrink-0">
                                 <i class="fa bi-person-bounding-box fa-2x"></i>
                             </div>
-                            <h5 class="mb-3">채용정보</h5>
-                            <p class="m-0">구인구직, 직업훈련 등 채용과 관련된 정보를 공유하는 소통의 공간이 됩니다.</p>
+                            <h5 class="mb-3">적성검사</h5>
+                            <p class="m-0">IT직무와 관련한 역량을 인/적성 측면으로 측정하여 적합도를 확인할 수 있습니다.</p>
                             <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -201,7 +201,7 @@
                             </div>
                             <h5 class="mb-3">캘린더</h5>
                             <p class="m-0">내가 등록한 관심 자격증이 캘린더로 업데이트 되어 해당 자격증의 정보를 보여줍니다.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                            <a class="btn btn-square" href="/Project/Calendar/mypageCalendar.jsp"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6  fadeInUp" data--delay="0.3s">
@@ -211,7 +211,7 @@
                             </div>
                             <h5 class="mb-3">주변학원찾기</h5>
                             <p class="m-0">내가 살고 있는 동네 주변에서 나에게 맞는 학원이 있는지 검색하고 비교해볼 수 있습니다.</p>
-                               <a class="btn btn-square" href="">
+                               <a class="btn btn-square" href="academy.jsp">
                                <i class="fa fa-arrow-right"></i>
                                </a>
                         </div>
@@ -223,7 +223,7 @@
                             </div>
                             <h5 class="mb-3">커뮤니티</h5>
                             <p class="m-0">자격증 응시자, 관련 업계 현직 종사자 등 다양한 사람들과 비전을 공유할 수 있습니다.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                            <a class="btn btn-square" href="board.jsp"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
