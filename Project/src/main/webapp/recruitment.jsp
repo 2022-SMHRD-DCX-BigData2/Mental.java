@@ -36,11 +36,15 @@
     <link href="css/style.css" rel="stylesheet">
     
     <style type="text/css">
+    	thead{
+    		font-size: 20px;
+    		font-style: bold;
+    	}
     	tr{
     		height: 50px;
     	}
     
-    </style>
+    </style>   
 </head>
 
 <body>

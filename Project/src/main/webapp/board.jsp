@@ -17,7 +17,16 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-   
+	<style type="text/css">
+    	thead{
+    		font-size: 20px;
+    		font-style: bold;
+    	}
+    	tr{
+    		height: 50px;
+    	}
+    
+    </style>   
 </head>
 
 <body>
