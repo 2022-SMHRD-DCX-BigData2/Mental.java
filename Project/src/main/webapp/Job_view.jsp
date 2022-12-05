@@ -154,9 +154,9 @@
 		
 		<div align="right" style="margin-right: 180px;">
 			<%if(loginMember == null){ %>
-	    	    <button class="btn btn-secondary" style ="text-align: right; color:white">목록으로</button>
+	    	    <a class="btn btn-secondary" style ="text-align: right; color:white" href="recruitment.jsp">목록으로</a>
         	<%}else{ %>
-	    	    <button class="btn btn-secondary" style ="text-align: right; color:white">목록으로</button>
+	    	    <a class="btn btn-secondary" style ="text-align: right; color:white" href="recruitment.jsp">목록으로</a>
 			<%} %>	
 			
 			

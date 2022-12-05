@@ -155,12 +155,12 @@
 		
 		<div align="right" style="margin-right: 180px;">
 			<%if(loginMember == null){ %>
-	    	    <button class="btn btn-secondary" style ="text-align: right; color:white">목록으로</button>
+	    	    <a class="btn btn-secondary" style ="text-align: right; color:white" href="board.jsp">목록으로</a>
 			<%}else if(mem_id.equals(loginMember.getmem_id())){%>
 		        <a href="updateBoard.jsp?bd_num=<%=board_view.getBd_num()%>"  class="btn btn-info"  style="color: white; ">수정하기</a>
-	    	    <button class="btn btn-secondary" style ="text-align: right; color:white">목록으로</button>
+	    	    <a class="btn btn-secondary" style ="text-align: right; color:white" href="board.jsp">목록으로</a>
         	<%}else{ %>
-	    	    <button class="btn btn-secondary" style ="text-align: right; color:white">목록으로</button>
+	    	    <a class="btn btn-secondary" style ="text-align: right; color:white" href="board.jsp">목록으로</a>
 			<%} %>	
 			
 			
@@ -194,9 +194,7 @@
     <script src="js/main.js"></script>
     
     <script type="text/javascript">
-    function updateBoard(){
-	    location.href='updateBoard.jsp?bd_num=<%=board_view.getBd_num()%>'
-    }
+   
     
     </script>
 </body>
