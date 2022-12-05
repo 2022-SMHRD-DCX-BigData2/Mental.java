@@ -121,8 +121,6 @@
                             <h1 class="text-white animated slideInDown" style="margin-top: 50px!important">채용 정보</h1>
                             <hr class="bg-white mx-auto mt-0" style="width: 90px;">
                              
-                                </ol>
-                            </nav>
                         </div>
                     </div>
                 </div>
@@ -136,9 +134,12 @@
         <div class="container">
             <div class="row table-div" style="margin-top:5px!important width">
            	<div style="margin-bottom:10px; width:1400px!important; padding: 0px!important;">
+           	<form action="recruitment.jsp" method="post">
            	<input type="text" class="form-control" name="search" placeholder="검색어를 입력해 주세요." style="width:1100px ; height:50px;
            				 display: inline-block;">
-          	<button class="btn btn-primary"  style="margin-left:20px; padding: 15px; margin-top: 0px" >검색</button>
+          	<button type="submit" class="btn btn-primary"  style="margin-left:20px; padding: 15px; margin-top: 0px" >검색</button>
+           	</form>
+          	
            	</div>
                 <table class="table-setting" >
                     <thead>
@@ -165,28 +166,23 @@
                     		<td>2020-07-13</td>
                     	</tr> -->
                         
-                         <%
+                     <%
 						JobDAO dao = new JobDAO(); // 인스턴스 생성
 						BoardDAO board= new BoardDAO();
-						Date nowDate = new Date();
+						// Date nowDate = new Date();
 						List<Job> list = dao.getList();
-						SimpleDateFormat simple = new SimpleDateFormat("YYYY-MM-dd");
-						
+						// SimpleDateFormat simple = new SimpleDateFormat("YYYY-MM-dd");
 						for(int i = 0; i < list.size(); i++){
 					%>
 					<tr>
 						<td><%= list.get(i).getCMP_NUM() %></td>
 						<!-- 게시글 제목을 누르면 해당 글을 볼 수 있도록 링크를 걸어둔다 -->
-						<td><a href="Job_view.jsp?job_num=<%= list.get(i).getCMP_NUM() %>" style="color: black;">
-							<%= list.get(i).getCMP_NAME() %> 과 함께할 가족을 모집합니다~~</a></td>
+						<td><a href="Job_view.jsp?job_num=<%= list.get(i).getCMP_NUM() %>" style="color: black;"><%= list.get(i).getCMP_NAME() %> 과 함께할 가족을 모집합니다~~</a></td>
 						<td>관리자</td>
-						<td><%= simple.format(nowDate) %></td>
+						<td><a href="Job_view.jsp?job_num=<%= list.get(i).getCMP_NUM() %>" style="color: black;">자세히 보기</a></td>
+					<%} %>
 					</tr>
-					<%
-						}
-						
-					%>
-                    </tbody>
+	                </tbody>
                     </table>
                     </div>
                     <!-- 글쓰기 버튼 생성 -->

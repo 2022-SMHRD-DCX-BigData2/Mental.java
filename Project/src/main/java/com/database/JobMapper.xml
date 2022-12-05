@@ -12,8 +12,16 @@
 	
 	<select id="view_job" parameterType="int" resultType="com.domain.Job">
 		select to_char(cmp_num), cmp_name, cmp_title, cmp_add 
-		from job_advrt where cmp_num=#{job_num}
+		from job_advrt
+		where cmp_num=#{job_num}
 	</select>
 
+	<select id="search_x" parameterType="String" resultType="com.domain.Job">
+		select to_char(cmp_num), cmp_name, cmp_title, cmp_add 
+		from job_advrt
+		where cmp_name Like '%#{search.trim()}%' 
+	
+			
+	</select>
 
 </mapper>
