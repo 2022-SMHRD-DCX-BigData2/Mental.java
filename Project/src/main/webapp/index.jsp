@@ -103,7 +103,7 @@
                             <h1 class="text-white mb-4 animated slideInDown">취업에 자신감을 더하다!</h1>
                             <p class="text-white pb-3 animated slideInDown">안녕하세요. 자격증 플러스 페이지 입니다. 환영합니다.</p>
                             <a href="board2.jsp" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">추천 자격증 리스트</a>
-                            <a href="" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+                            <a href="board3.jsp" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">시험 합격률 조회</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-start">
                             <img src="/Project/img/그림2.png" alt="Logo">
