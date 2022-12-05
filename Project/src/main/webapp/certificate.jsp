@@ -59,7 +59,14 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
                         <a href="index.jsp" class="nav-item nav-link active">Home</a>
-                        <a href="recruitment.jsp" class="nav-item nav-link">채용정보</a>
+                        <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">채용/자격증</a>
+                            <div class="dropdown-menu m-0">
+                     		    <a href="recruitment.jsp" class="dropdown-item">채용정보</a>
+                                <a href="board2.jsp" class="dropdown-item">추천 자격증 리스트</a>
+                                <a href="board3.jsp" class="dropdown-item">시험 합격률 조회</a>
+                            </div>
+                        </div>
                         <a href="./Calendar/Calendar.jsp" class="nav-item nav-link">자격증 캘린더</a>
                         <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
                         <a href="board.jsp" class="nav-item nav-link">커뮤니티</a>

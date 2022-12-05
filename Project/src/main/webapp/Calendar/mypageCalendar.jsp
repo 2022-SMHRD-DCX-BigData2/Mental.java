@@ -75,10 +75,17 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
+                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                         <a href="/Project/index.jsp" class="nav-item nav-link active">Home</a>
-                        <a href="/Project/recruitment.jsp" class="nav-item nav-link">채용정보</a>
+                        <a href="/Project/index.jsp" class="nav-item nav-link active">Home</a>
+                        <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">채용/자격증</a>
+                            <div class="dropdown-menu m-0">
+                     		    <a href="/Project/recruitment.jsp" class="dropdown-item">채용정보</a>
+                                <a href="/Project/board2.jsp" class="dropdown-item">추천 자격증 리스트</a>
+                                <a href="/Project/board3.jsp" class="dropdown-item">시험 합격률 조회</a>
+                            </div>
+                        </div>
                         <a href="/Project/Calendar/Calendar.jsp" class="nav-item nav-link">자격증 캘린더</a>
                         <a href="/Project/academy.jsp" class="nav-item nav-link">주변학원찾기</a>
                         <a href="/Project/board.jsp" class="nav-item nav-link">커뮤니티</a>
