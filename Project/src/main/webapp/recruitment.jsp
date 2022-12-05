@@ -154,7 +154,7 @@
                     <th class ="th-setting" style="width: 10%">번호</th>
                     <th class ="th-setting" style="width: 50%">제목</th>
                     <th class ="th-setting" style="width:15%">작성자</th>
-                    <th class ="th-setting" style="width :15%">작성일</th>
+                    <th class ="th-setting" style="width :15%">자세히보기</th>
 <!--                <th class ="th-setting" style="width: 5%">번호</th>
                     <th class ="th-setting" style="width: 10%">회사명</th>
                     <th class ="th-setting" style="width: 50%">공고명</th>
