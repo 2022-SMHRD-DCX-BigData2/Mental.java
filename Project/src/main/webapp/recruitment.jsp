@@ -34,6 +34,13 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <style type="text/css">
+    	tr{
+    		height: 50px;
+    	}
+    
+    </style>
 </head>
 
 <body>
@@ -118,12 +125,15 @@
         <!-- Service Start -->
         <!-- 게시판 시작 -->
         <div class="container">
-           <input type="text" class="form-control" name="search" placeholder="검색어를 입력해 주세요." >
-                <button class="btn btn-primary" >검색</button>
-            <div class="row table-div">
+            <div class="row table-div" style="margin-top:5px!important width">
+           	<div style="margin-bottom:10px; width:1400px!important; padding: 0px!important;">
+           	<input type="text" class="form-control" name="search" placeholder="검색어를 입력해 주세요." style="width:1100px ; height:50px;
+           				 display: inline-block;">
+          	<button class="btn btn-primary"  style="margin-left:20px; padding: 15px; margin-top: 0px" >검색</button>
+           	</div>
                 <table class="table-setting" >
                     <thead>
-                    <tr>
+                    <tr >
                     <th class ="th-setting" style="width: 10%">번호</th>
                     <th class ="th-setting" style="width: 50%">제목</th>
                     <th class ="th-setting" style="width:15%">작성자</th>
@@ -145,25 +155,25 @@
                     		<td>관리자</td>
                     		<td>2020-07-13</td>
                     	</tr> -->
-                        <tr>
+                        <tr >
                     		<td>4</td>
                     		<td>📢현직자 멘토를 모집합니다.</td>
                     		<td>관리자</td>
                     		<td>2020-07-13</td>
                     	</tr>
-                   		 <tr>
+                   		 <tr >
                     		<td>3</td>
                     		<td>00기업 신입 및 경력 채용공고</td>
                     		<td>관리자</td>
                     		<td>2020-07-14</td>
                     	</tr>
-                         <tr>
+                         <tr >
                     		<td>2</td>
                     		<td>00기업 신규 채용 공고</td>
                     		<td>관리자</td>
                     		<td>2020-07-15</td>
                     	</tr>
-                    	<tr>
+                    	<tr >
                     		<td>1</td>
                     		<td>00기업 신입 및 경력 채용공고</td>
                     		<td>관리자</td>
