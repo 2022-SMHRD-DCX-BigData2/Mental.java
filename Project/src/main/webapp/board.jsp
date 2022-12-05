@@ -31,14 +31,12 @@
 
 <body>
    
-            <div class="container-xxl py-5 bg-primary hero-header">
-                <div class="container my-5 py-5 px-lg-5">
+            <div class="container-xxl py-5 bg-primary hero-header"  style="max-height: 450px!important;">
+                <div class="container my-5 py-5 px-lg-5" >
                     <div class="row g-5 py-5">
-                        <div class="col-12 text-center">
-                            <h1 class="text-white animated slideInDown">Community</h1>
+                        <div class="col-12 text-center" >
+                            <h1 class="text-white animated slideInDown" style="margin-top: 50px!important">Community</h1>
                             <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                             
-                             
                         </div>
                     </div>
                 </div>
