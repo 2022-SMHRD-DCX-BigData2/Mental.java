@@ -3,10 +3,17 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.database.JobMapper">
+   
    <select id="get_Job" resultType="com.domain.Job">
-   		select to_char(cmp_num), cmp_name, cmp_title, cmp_add from job_advrt
+   		select to_char(cmp_num), cmp_name, cmp_title, cmp_add 
+   		from job_advrt
    </select>
 	
+	
+	<select id="view_job" parameterType="int" resultType="com.domain.Job">
+		select to_char(cmp_num), cmp_name, cmp_title, cmp_add 
+		from job_advrt where cmp_num=#{job_num}
+	</select>
 
 
 </mapper>

@@ -1,18 +1,21 @@
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="java.util.Date"%>
-<%@page import="com.domain.BoardDAO"%>
 <%@page import="com.domain.Job"%>
 <%@page import="com.domain.JobDAO"%>
-<%@page import="java.util.List"%>
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="com.domain.Member"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+	Member loginMember = (Member)session.getAttribute("loginMember");
+	
+%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>채용정보</title>
+    <title>커뮤니티</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -32,28 +35,17 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/;css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    
-    <style type="text/css">
-    	thead{
-    		font-size: 20px;
-    		font-style: bold;
-    	}
-    	tr{
-    		height: 50px;
-    	}
-    
-    </style>   
 </head>
 
 <body>
-  <div class="container-xxl bg-white p-0">
+   <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -112,98 +104,76 @@
               	 </nav>
                 </div>
 				 
-                        
-                 
-             <div class="container-xxl py-5 bg-primary hero-header"  style="max-height: 450px!important;">
+
+            <div class="container-xxl py-5 bg-primary hero-header">
                 <div class="container my-5 py-5 px-lg-5">
                     <div class="row g-5 py-5">
                         <div class="col-12 text-center">
-                            <h1 class="text-white animated slideInDown" style="margin-top: 50px!important">채용 정보</h1>
+                            <h1 class="text-white animated slideInDown">Search</h1>
                             <hr class="bg-white mx-auto mt-0" style="width: 90px;">
-                             
-                                </ol>
+                            <nav aria-label="breadcrumb">
+                            
+                            
+
                             </nav>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Navbar & Hero End -->
 
+		<%
+			int job_num = Integer.parseInt(request.getParameter("job_num"));
+			JobDAO dao = new JobDAO();
+			Job Job_view = dao.view(job_num);
+			
+		%>
+			
+        	<p style="text-align:center; font-size: 30px; font-weight: 900; margin-top:revert;">채용정보 보기</p>
+        	<br>
+		<form style="margin-left: 15rem; font-size: 20px;">    	
+        <div class="form-group">
+        	<span style="display:inline-block; width: 100px; height: 50px;">제목</span>
+            <span style="background-color:#ecf0f1; width: 795px; border: 1px solid #ced4da; border-radius: 10px; display: inline-block;"><%= Job_view.getCMP_NAME() %> 와(과) 함께할 직원을 구합니다~~</span>
+        </div>
+        <div class="form-group">
+            <span style="display:inline-block ;width: 100px; ">작성자</span>
+             <span style="background-color:#ecf0f1; width: 795px; border: 1px solid #ced4da; border-radius: 10px; display: inline-block;">관리자</span>
+           <br>
+           <br>
+        </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">내용</label>
+            <div class="form-control" id="exampleFormControlTextarea1" name="contents" text-align="center" style="background-color:#ecf0f1; width: 900px; height:200px;">
+            	<%= Job_view.getCMP_TITLE() %>
+            </div>
+          </div>
+        <!-- <button onclick="updateBoard()" class="btn btn-info" style ="background-color: light-green; margin:0 auto;" >수정하기</button> -->
+		
+			
+		
+		<div align="right" style="margin-right: 180px;">
+			<%if(loginMember == null){ %>
+	    	    <button class="btn btn-secondary" style ="text-align: right; color:white">목록으로</button>
+        	<%}else{ %>
+	    	    <button class="btn btn-secondary" style ="text-align: right; color:white">목록으로</button>
+			<%} %>	
+			
+			
+		</div>
+	</form>
+	
+	
+	
+	
+	
+    
+  
 
-        <!-- Service Start -->
-        <!-- 게시판 시작 -->
-        <div class="container">
-            <div class="row table-div" style="margin-top:5px!important width">
-           	<div style="margin-bottom:10px; width:1400px!important; padding: 0px!important;">
-           	<input type="text" class="form-control" name="search" placeholder="검색어를 입력해 주세요." style="width:1100px ; height:50px;
-           				 display: inline-block;">
-          	<button class="btn btn-primary"  style="margin-left:20px; padding: 15px; margin-top: 0px" >검색</button>
-           	</div>
-                <table class="table-setting" >
-                    <thead>
-                    <tr >
-                    <th class ="th-setting" style="width: 10%">번호</th>
-                    <th class ="th-setting" style="width: 50%">제목</th>
-                    <th class ="th-setting" style="width:15%">작성자</th>
-                    <th class ="th-setting" style="width :15%">작성일</th>
-<!--                <th class ="th-setting" style="width: 5%">번호</th>
-                    <th class ="th-setting" style="width: 10%">회사명</th>
-                    <th class ="th-setting" style="width: 50%">공고명</th>
-                    <th class ="th-setting" style="width:15%">주소</th>
-                    <th class ="th-setting" style="width:10%">작성자</th>
-                    <th class ="th-setting" style="width :10%">작성일</th> -->
-                    </tr>
-                    </thead>
-                    <tbody>
-<!--                          <tr>
-                    		<td>5</td>
-                    		<td>스마트인재개발원</td>
-                    		<td>📢커뮤니티 이용 시 주의사항(필독!!)</td>
-                    		<td>전남 순천시</td>
-                    		<td>관리자</td>
-                    		<td>2020-07-13</td>
-                    	</tr> -->
-                        
-                         <%
-						JobDAO dao = new JobDAO(); // 인스턴스 생성
-						BoardDAO board= new BoardDAO();
-						Date nowDate = new Date();
-						List<Job> list = dao.getList();
-						SimpleDateFormat simple = new SimpleDateFormat("YYYY-MM-dd");
-						
-						for(int i = 0; i < list.size(); i++){
-					%>
-					<tr>
-						<td><%= list.get(i).getCMP_NUM() %></td>
-						<!-- 게시글 제목을 누르면 해당 글을 볼 수 있도록 링크를 걸어둔다 -->
-						<td><a href="Job_view.jsp?job_num=<%= list.get(i).getCMP_NUM() %>" style="color: black;">
-							<%= list.get(i).getCMP_NAME() %> 과 함께할 가족을 모집합니다~~</a></td>
-						<td>관리자</td>
-						<td><%= simple.format(nowDate) %></td>
-					</tr>
-					<%
-						}
-						
-					%>
-                    </tbody>
-                    </table>
-                    </div>
-                    <!-- 글쓰기 버튼 생성 -->
-                    <div align="right">
-                    <button class="btn write_btn" onclick="location.href='recruitmentWrite.jsp'">글쓰기</button>
-                    </div>
-                    </div>
-                <!-- 게시판 메인 페이지 영역 끝 -->
-                
         
-        
-        
-
-
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -218,5 +188,11 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <script type="text/javascript">
+    
+    
+    </script>
 </body>
+
 </html>

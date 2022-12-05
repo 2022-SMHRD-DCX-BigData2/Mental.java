@@ -70,7 +70,7 @@
 					<tr>
 						<td><%= list.get(i).getBd_num() %></td>
 						<!-- 게시글 제목을 누르면 해당 글을 볼 수 있도록 링크를 걸어둔다 -->
-						<td><a href="view.jsp?bd_num=<%= list.get(i).getBd_num() %>">
+						<td><a href="view.jsp?bd_num=<%= list.get(i).getBd_num() %>" style="color: black;">
 							<%= list.get(i).getBd_title() %></a></td>
 						<td><%= mem_id %></td>
 						<td><%= list.get(i).getBd_date() %></td>

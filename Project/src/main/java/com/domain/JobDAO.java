@@ -38,4 +38,34 @@ public class JobDAO {
 	      
 	      return Job_List;
 	}
+	
+	
+	// 게시글 가져오기
+			public Job view(int job_num){
+				Job get_JobNum = null;
+			      
+			      try {
+			         //               mapper.xml의 id값
+			    	  get_JobNum = sqlSession.selectOne("view_job", job_num);
+			         
+			         // 만약에 내가 원하는 일을 했으면 DB에 반영
+			         if(get_JobNum != null) {
+			            System.out.println("DAO : 게시판view 성공!!");
+			            sqlSession.commit();
+			         }else {
+			            // 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
+			            sqlSession.rollback();
+			         }
+			         
+			         
+			      } catch (Exception e) {
+			         // TODO: handle exception
+			         e.printStackTrace();
+			      } finally {
+			         
+			      }
+			      
+			      
+			      return get_JobNum;
+			}
 }
