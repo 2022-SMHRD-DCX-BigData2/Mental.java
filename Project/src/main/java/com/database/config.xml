@@ -20,5 +20,6 @@
   <mappers>
     <mapper resource="com/database/MemberMapper.xml"/>
     <mapper resource="com/database/CalendarMapper.xml"/>
+    <mapper resource="com/database/JobMapper.xml"/>
   </mappers>
 </configuration>

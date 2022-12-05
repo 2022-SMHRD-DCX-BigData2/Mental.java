@@ -1,3 +1,8 @@
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
+<%@page import="com.domain.BoardDAO"%>
+<%@page import="com.domain.Job"%>
+<%@page import="com.domain.JobDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
@@ -159,30 +164,27 @@
                     		<td>관리자</td>
                     		<td>2020-07-13</td>
                     	</tr> -->
-                        <tr >
-                    		<td>4</td>
-                    		<td>📢현직자 멘토를 모집합니다.</td>
-                    		<td>관리자</td>
-                    		<td>2020-07-13</td>
-                    	</tr>
-                   		 <tr >
-                    		<td>3</td>
-                    		<td>00기업 신입 및 경력 채용공고</td>
-                    		<td>관리자</td>
-                    		<td>2020-07-14</td>
-                    	</tr>
-                         <tr >
-                    		<td>2</td>
-                    		<td>00기업 신규 채용 공고</td>
-                    		<td>관리자</td>
-                    		<td>2020-07-15</td>
-                    	</tr>
-                    	<tr >
-                    		<td>1</td>
-                    		<td>00기업 신입 및 경력 채용공고</td>
-                    		<td>관리자</td>
-                    		<td>2020-07-16</td>
-                    	</tr>
+                        
+                         <%
+						JobDAO dao = new JobDAO(); // 인스턴스 생성
+						BoardDAO board= new BoardDAO();
+						Date nowDate = new Date();
+						List<Job> list = dao.getList();
+						SimpleDateFormat simple = new SimpleDateFormat("YYYY-MM-dd");
+						
+						for(int i = 0; i < list.size(); i++){
+					%>
+					<tr>
+						<td><%= list.get(i).getCMP_NUM() %></td>
+						<!-- 게시글 제목을 누르면 해당 글을 볼 수 있도록 링크를 걸어둔다 -->
+						<td><%= list.get(i).getCMP_NAME() %> 과 함께할 가족을 모집합니다~~</td>
+						<td>관리자</td>
+						<td><%= simple.format(nowDate) %></td>
+					</tr>
+					<%
+						}
+						
+					%>
                     </tbody>
                     </table>
                     </div>
