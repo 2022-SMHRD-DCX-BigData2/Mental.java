@@ -83,10 +83,13 @@
                     </table>
                     </div>
                     <!-- 글쓰기 버튼 생성 -->
+    				<c:choose>
+					<c:when test="${not empty loginMember }">
                     <div align="right">
-                    
                     <button class="btn write_btn" onclick="location.href='write.jsp'">글쓰기</button>
                     </div>
+					</c:when>
+    				</c:choose>
                     </div>
                 <!-- 게시판 메인 페이지 영역 끝 -->
                 
