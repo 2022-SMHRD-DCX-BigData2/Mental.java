@@ -71,6 +71,8 @@
                         <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
                         <a href="board.jsp" class="nav-item nav-link">커뮤니티</a>
                         
+                        <c:choose>
+                        <c:when test="${not empty loginMember}">
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
@@ -79,6 +81,8 @@
                                 <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
                             </div>
                         </div>
+                        </c:when>
+						</c:choose>     
                     </div>
                                   
               </div>
