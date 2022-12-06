@@ -141,10 +141,11 @@
 			String mem_id = dao.getmemId(board_view.getMem_no());
 			
 		%>
+			<div class="container">
 			
         	<p style="text-align:center; font-size: 30px; font-weight: 900; margin-top:revert;">게시글 보기</p>
         	<br>
-		<form style="margin-left: 18rem; font-size: 20px;">    	
+		<form style="margin-left: 13rem; font-size: 20px;">    	
         <div class="form-group">
         	<span style="display:inline-block; width: 100px; height: 50px;">제목</span>
             <span style="background-color:#ecf0f1; width: 795px; border: 1px solid #ced4da; border-radius: 10px; display: inline-block;"><%= board_view.getBd_title() %></span>
@@ -176,6 +177,7 @@
 			<%} %>	
 			
 			
+		</div>
 		</div>
 	</form>
 	
