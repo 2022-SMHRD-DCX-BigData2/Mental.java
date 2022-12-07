@@ -96,7 +96,7 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
-                                <a href="/Project/Calendar/mypageCalendar.jsp" class="dropdown-item">캘린더</a>
+                                <a href="mypageCalendar.jsp" class="dropdown-item">캘린더</a>
                                 <a href="/Project/mypage.jsp" class="dropdown-item">관심 자격증</a>
                                 <a href="/Project/update.jsp" class="dropdown-item">회원정보 수정</a>
                                 <a href="/Project/ImageBoard.jsp" class="dropdown-item">합격후기</a>
