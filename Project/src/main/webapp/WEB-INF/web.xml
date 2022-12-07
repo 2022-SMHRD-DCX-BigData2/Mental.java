@@ -71,6 +71,12 @@
   	<description></description>
   	<servlet-class>com.controller.Calendar_Reg_send</servlet-class>
   </servlet>
+<servlet>
+	<servlet-name>imageBoard</servlet-name>
+	<display-name>imageBoard</display-name>
+	<description></description>
+	<servlet-class>imageBoard</servlet-class>
+</servlet>
 
 
 	
@@ -117,6 +123,10 @@
   <servlet-mapping>
   	<servlet-name>Calendar_Reg_send</servlet-name>
   	<url-pattern>/Calendar_Reg_send</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>imageBoard</servlet-name>
+  	<url-pattern>/imageBoard</url-pattern>
   </servlet-mapping>
 
 
