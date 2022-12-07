@@ -75,6 +75,9 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
                  <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
                         <a href="/Project/index.jsp" class="nav-item nav-link active">Home</a>
@@ -90,26 +93,15 @@
                         <a href="/Project/academy.jsp" class="nav-item nav-link">주변학원찾기</a>
                         <a href="/Project/board.jsp" class="nav-item nav-link">커뮤니티</a>
                         
-                        <c:choose>
-                        <c:when test="${not empty loginMember}">
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
-<<<<<<< HEAD
                                 <a href="/Project/Calendar/mypageCalendar.jsp" class="dropdown-item">캘린더</a>
                                 <a href="/Project/mypage.jsp" class="dropdown-item">관심 자격증</a>
                                 <a href="/Project/update.jsp" class="dropdown-item">회원정보 수정</a>
-                                <a href="ImageBoard.jsp" class="dropdown-item">합격후기</a>
-=======
-                                <a href="/Project/Calenda2r/mypageCalendar.jsp" class="dropdown-item">캘린더</a>
-                                <a href="mypage.jsp" class="dropdown-item">관심 자격증</a>
-                                <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
-                                <a href="NewFile.jsp" class="dropdown-item">합격후기</a>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-DCX-BigData2/Mental.java.git
+                                <a href="/Project/ImageBoard.jsp" class="dropdown-item">합격후기</a>
                             </div>
                         </div>
-                        </c:when>
-						</c:choose>
                     </div>
                                   
               </div>
@@ -133,8 +125,6 @@
               
               	 </nav>
                 </div>
-    
-    
     
     
     

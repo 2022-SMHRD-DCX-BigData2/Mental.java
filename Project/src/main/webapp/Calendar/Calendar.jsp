@@ -81,24 +81,24 @@
                         <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">채용/자격증</a>
                             <div class="dropdown-menu m-0">
-                     		    <a href="recruitment.jsp" class="dropdown-item">채용정보</a>
-                                <a href="board2.jsp" class="dropdown-item">추천 자격증 리스트</a>
-                                <a href="board3.jsp" class="dropdown-item">시험 합격률 조회</a>
+                     		    <a href="/Project/recruitment.jsp" class="dropdown-item">채용정보</a>
+                                <a href="/Project/board2.jsp" class="dropdown-item">추천 자격증 리스트</a>
+                                <a href="/Project/board3.jsp" class="dropdown-item">시험 합격률 조회</a>
                             </div>
                         </div>
-                        <a href="./Calendar/Calendar.jsp" class="nav-item nav-link">자격증 캘린더</a>
-                        <a href="academy.jsp" class="nav-item nav-link">주변학원찾기</a>
-                        <a href="board.jsp" class="nav-item nav-link">커뮤니티</a>
+                        <a href="/Project/Calendar/Calendar.jsp" class="nav-item nav-link">자격증 캘린더</a>
+                        <a href="/Project/academy.jsp" class="nav-item nav-link">주변학원찾기</a>
+                        <a href="/Project/board.jsp" class="nav-item nav-link">커뮤니티</a>
                       
                        <c:choose>
                         <c:when test="${not empty loginMember}">
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
-                                <a href="/Project/Calenda2r/mypageCalendar.jsp" class="dropdown-item">캘린더</a>
-                                <a href="mypage.jsp" class="dropdown-item">관심 자격증</a>
-                                <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
-                                <a href="../ImageBoard.jsp" class="dropdown-item">합격후기</a>
+                                <a href="/Project/Calendar/mypageCalendar.jsp" class="dropdown-item">캘린더</a>
+                                <a href="/Project/mypage.jsp" class="dropdown-item">관심 자격증</a>
+                                <a href="/Project/update.jsp" class="dropdown-item">회원정보 수정</a>
+                                <a href="/Project/ImageBoard.jsp" class="dropdown-item">합격후기</a>
                             </div>
                         </div>
                         </c:when>
