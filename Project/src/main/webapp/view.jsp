@@ -116,11 +116,11 @@
                 </div>
 				 
 
-            <div class="container-xxl py-5 bg-primary hero-header">
+            <div class="container-xxl py-5 bg-primary hero-header" style="max-height: 450px!important;">
                 <div class="container my-5 py-5 px-lg-5">
                     <div class="row g-5 py-5">
                         <div class="col-12 text-center">
-                            <h1 class="text-white animated slideInDown">Search</h1>
+                            <h1 class="text-white animated slideInDown" style="margin-top: 50px!important">Search</h1>
                             <hr class="bg-white mx-auto mt-0" style="width: 90px;">
                             <nav aria-label="breadcrumb">
                             
@@ -130,6 +130,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
 
@@ -140,10 +141,11 @@
 			String mem_id = dao.getmemId(board_view.getMem_no());
 			
 		%>
+			<div class="container">
 			
         	<p style="text-align:center; font-size: 30px; font-weight: 900; margin-top:revert;">게시글 보기</p>
         	<br>
-		<form style="margin-left: 15rem; font-size: 20px;">    	
+		<form style="margin-left: 13rem; font-size: 20px;">    	
         <div class="form-group">
         	<span style="display:inline-block; width: 100px; height: 50px;">제목</span>
             <span style="background-color:#ecf0f1; width: 795px; border: 1px solid #ced4da; border-radius: 10px; display: inline-block;"><%= board_view.getBd_title() %></span>
@@ -175,6 +177,7 @@
 			<%} %>	
 			
 			
+		</div>
 		</div>
 	</form>
 	

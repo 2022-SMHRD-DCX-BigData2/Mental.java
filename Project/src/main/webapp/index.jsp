@@ -75,7 +75,7 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">마이페이지</a>
                             <div class="dropdown-menu m-0">
-                                <a href="/Project/Calendar/mypageCalendar.jsp" class="dropdown-item">캘린더</a>
+                                <a href="/Project/Calenda2r/mypageCalendar.jsp" class="dropdown-item">캘린더</a>
                                 <a href="mypage.jsp" class="dropdown-item">관심 자격증</a>
                                 <a href="update.jsp" class="dropdown-item">회원정보 수정</a>
                                 <a href="ImageBoard.jsp" class="dropdown-item">합격후기</a>
@@ -196,7 +196,7 @@
                             </div>
                             <h5 class="mb-3">적성검사</h5>
                             <p class="m-0">IT직무와 관련한 역량을 인/적성 측면으로 측정하여 적합도를 확인할 수 있습니다.</p>
-                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                            <a class="btn btn-square" href="#"><i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6  fadeInUp" data--delay="0.1s">
